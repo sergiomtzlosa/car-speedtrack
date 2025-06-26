@@ -1,0 +1,863 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00CCA99EF575DDE3B40B0775 /* CSSaveManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C3859521585FFF31C8809 /* CSSaveManagerTests.m */; };
+		04136933A4E1019606DCBAFA /* CSGameCatalog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB7F6A394270CE7ADBDE9716 /* CSGameCatalog.h */; };
+		05AB23F4D37473EED690F417 /* audio_manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C8417D3F4ABDA1E41A9F3006 /* audio_manifest.json */; };
+		07C7F58ED0F84CF148E7C6C0 /* CSGameSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA1E5884FC72C5562C5DC72 /* CSGameSessionTests.m */; };
+		08D1AC01C341EE66585845FE /* CSRoadPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC9F6A4A059D940B2D9AD0 /* CSRoadPath.m */; };
+		0C85E431E35C905DD6DC6D4A /* CSBriefingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A376BBE3500012EFC2D10 /* CSBriefingScene.m */; };
+		11B2ED79FADDAA3C7F850AE5 /* CSResultsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71566974DE6B5FFF679107 /* CSResultsScene.m */; };
+		125A7BD085B7F9A1D1834C47 /* CSRoadPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E535D37600161C2811B3B615 /* CSRoadPath.h */; };
+		1302AB0D58A7138A92853630 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 6657CC1164E8306B20C4B985 /* cars.json */; };
+		220E0FECC846B1DF4E33ED78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE69F2E0F4DCE8A8EE9E07 /* main.m */; };
+		2AFF71A6A0645DA6A0CCC755 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = CD3E0B31515B309E1940100D /* Data */; };
+		32BC0A4CF7E3E50E758B5D57 /* CSGameSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2FC8639D6CF244C410408 /* CSGameSession.m */; };
+		382DF56C8DCB25059DBD6A06 /* CSAssetManifestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383AFFF684BFC8548E4B00DF /* CSAssetManifestTests.m */; };
+		3942975D12203C3E44A37501 /* CSAssetCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C65794FE9884DDC975ECF1F /* CSAssetCatalog.m */; };
+		3E027DB04429FBF498E07C9B /* Art in Resources */ = {isa = PBXBuildFile; fileRef = 50F1BECED4249BF609C5AA3D /* Art */; };
+		410D6FF5489C5C217A6BAAE6 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D867A05EE086B1D4DBE4AB /* CSAppDelegate.m */; };
+		43119FEF0791C74EF4731AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD11A681580CDBA9DC9111F5 /* Assets.xcassets */; };
+		4460B37784E48920C2701BF3 /* CSPixelLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B18F9DE52376856E6940A31 /* CSPixelLabelNode.m */; };
+		48D164DDA404019D3F4025B9 /* libCarSpeedtrackCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2403A4D5EC1E6A57865E4AE6 /* libCarSpeedtrackCore.a */; };
+		4BB4497599A765C7BE31B346 /* CSPixelPanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BA69A9790C798FBA34E686 /* CSPixelPanelNode.m */; };
+		4BF2A8395882EAC19FCEDC66 /* CSPixelButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E73E23DA9DBCFB3DA95CBB3 /* CSPixelButtonNode.m */; };
+		51177E61D73B4A42A33EA2EE /* CSScreenScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1164AC0687F8CC755A6C5770 /* CSScreenScene.m */; };
+		5A011CD43D40ABB51D867E61 /* CSAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F04B7DC8828AE1D441CE7E /* CSAppContext.m */; };
+		5A131FAE306B9DA64B5F1E22 /* CSAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F41C7389201F9619C4D116 /* CSAudioManager.m */; };
+		634F6D71D355EB06BF293F50 /* CSModels.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A9241D515AC004E684F9E55 /* CSModels.h */; };
+		6A704A46CAFF9617CC9BAF42 /* CSModels.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC4D4813A2B2E98F8CCFBDA /* CSModels.m */; };
+		7656C7782E6E0D6C3869C5F3 /* CSSaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E49FEA55E43405FA0F4D59 /* CSSaveManager.m */; };
+		8421C1317B0F6F08F501FDBA /* CSRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4DE9FC3313D57C2871C8A5 /* CSRandom.m */; };
+		888B155643CA75E49F929059 /* CSRoadPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC5427CB50D6A74F77FF3D0 /* CSRoadPathTests.m */; };
+		915B43970A38B00999D56BA0 /* CSGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 217EB2CE7DCE37FF0874614A /* CSGameView.m */; };
+		952CE9D5DD77B1020EAB5817 /* CSSettingsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B840588608624B44A80A3D05 /* CSSettingsScene.m */; };
+		9ACD3DDED41633E1654E3D9C /* art_manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B1B5C6ED795DD7AEE6AA0DC4 /* art_manifest.json */; };
+		9DAA8A8C6D9DD2D6A75A36E8 /* CSScoresScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D71AEC967B96CC53F9F819B /* CSScoresScene.m */; };
+		9FE243D80C758DC0AC78A4EA /* libCarSpeedtrackCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2403A4D5EC1E6A57865E4AE6 /* libCarSpeedtrackCore.a */; };
+		A094AB0481E73DC40062F010 /* CSSaveManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE6EF53034EA5ABEB724C1E5 /* CSSaveManager.h */; };
+		AC47EE417119AD3EFA8CCD93 /* CSGameCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B58DFC271CB8DC181427E6 /* CSGameCatalog.m */; };
+		C3C4D1A2357785B05E9718DA /* CSLevelSelectScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDDD065FD1E4B2F86072886 /* CSLevelSelectScene.m */; };
+		C486E86047D5917A3C8DA931 /* font.json in Resources */ = {isa = PBXBuildFile; fileRef = C42DAEA5441889504D2527C5 /* font.json */; };
+		CA6C4AF8F325507988DE0725 /* CSMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF99FA5627F60B34A6BD8A /* CSMenuScene.m */; };
+		CC7603E1D8AC46C1CAA7C1DF /* CSGameSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28EAE49F70DD8C245C5624A8 /* CSGameSession.h */; };
+		CC7AA10B633B34F890A7746C /* CSGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D615422527261F6F6B65A6FB /* CSGameScene.m */; };
+		D0917BECB297BA5073052A44 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 7F3767F3C37F849A6DE39D59 /* Audio */; };
+		D156FBDDA2FC8B923109961E /* CSGarageScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03BD1F1ACA6D928B7E2EE1 /* CSGarageScene.m */; };
+		DC332573E1F6F1EDCE50AB38 /* CSSliderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FF062033E7E08F259CB43 /* CSSliderNode.m */; };
+		E1416B85422430D285E5C6BF /* CSRandom.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 519C630F98DF2110ADAA2332 /* CSRandom.h */; };
+		E9D60EF2CC66B25AC71D3E97 /* CSTestSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B872CDE3503C2AD7959AAA6 /* CSTestSupport.m */; };
+		EE991C837112B8B9F2908B46 /* levels.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE8F28772EF200AA4DB0DA4 /* levels.json */; };
+		F4AEDCCF68B8870BFA31E5E2 /* CSCatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 804A8CD14F0A9D38A8C10664 /* CSCatalogTests.m */; };
+		FED614EA3D26A5F904AE5D32 /* CSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AB0AC68A5E99C23762A67B /* CSGameViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7564839E714ECB7EED44EBEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D116D7A66893FE5A0801436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F938DD354C6D582E6937765C;
+			remoteInfo = CarSpeedtrackCore;
+		};
+		FE6DC190E2C0E23CB693F43C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D116D7A66893FE5A0801436 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F938DD354C6D582E6937765C;
+			remoteInfo = CarSpeedtrackCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00BC4A3D0E4D4B516FF34767 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				04136933A4E1019606DCBAFA /* CSGameCatalog.h in CopyFiles */,
+				CC7603E1D8AC46C1CAA7C1DF /* CSGameSession.h in CopyFiles */,
+				634F6D71D355EB06BF293F50 /* CSModels.h in CopyFiles */,
+				E1416B85422430D285E5C6BF /* CSRandom.h in CopyFiles */,
+				125A7BD085B7F9A1D1834C47 /* CSRoadPath.h in CopyFiles */,
+				A094AB0481E73DC40062F010 /* CSSaveManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07431C04306F011508546C77 /* CarSpeedtrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarSpeedtrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D730C31DFED2658E2565B91 /* CSGarageScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGarageScene.h; sourceTree = "<group>"; };
+		1014949E2711FB55F42F67A4 /* CSPixelPanelNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPixelPanelNode.h; sourceTree = "<group>"; };
+		10A0625ABA759C64E46B4DDF /* CSLevelSelectScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSLevelSelectScene.h; sourceTree = "<group>"; };
+		1164AC0687F8CC755A6C5770 /* CSScreenScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSScreenScene.m; sourceTree = "<group>"; };
+		11C61C0ADC2A04D6679A8CC7 /* CSPixelButtonNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPixelButtonNode.h; sourceTree = "<group>"; };
+		1A660ABBB8005B17B5D6672B /* CSGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameViewController.h; sourceTree = "<group>"; };
+		1B872CDE3503C2AD7959AAA6 /* CSTestSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSTestSupport.m; sourceTree = "<group>"; };
+		1D71AEC967B96CC53F9F819B /* CSScoresScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSScoresScene.m; sourceTree = "<group>"; };
+		217EB2CE7DCE37FF0874614A /* CSGameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameView.m; sourceTree = "<group>"; };
+		2403A4D5EC1E6A57865E4AE6 /* libCarSpeedtrackCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCarSpeedtrackCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28EAE49F70DD8C245C5624A8 /* CSGameSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameSession.h; sourceTree = "<group>"; };
+		29CE69F2E0F4DCE8A8EE9E07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		31B58DFC271CB8DC181427E6 /* CSGameCatalog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameCatalog.m; sourceTree = "<group>"; };
+		3324A09F718BD55FC9982358 /* CSAppContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppContext.h; sourceTree = "<group>"; };
+		383AFFF684BFC8548E4B00DF /* CSAssetManifestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAssetManifestTests.m; sourceTree = "<group>"; };
+		39D867A05EE086B1D4DBE4AB /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
+		3C71566974DE6B5FFF679107 /* CSResultsScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSResultsScene.m; sourceTree = "<group>"; };
+		3D03BD1F1ACA6D928B7E2EE1 /* CSGarageScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGarageScene.m; sourceTree = "<group>"; };
+		3F1FF062033E7E08F259CB43 /* CSSliderNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSliderNode.m; sourceTree = "<group>"; };
+		4A9241D515AC004E684F9E55 /* CSModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSModels.h; sourceTree = "<group>"; };
+		4E73E23DA9DBCFB3DA95CBB3 /* CSPixelButtonNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPixelButtonNode.m; sourceTree = "<group>"; };
+		50F1BECED4249BF609C5AA3D /* Art */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Art; path = CarSpeedtrack/Resources/Art; sourceTree = SOURCE_ROOT; };
+		519C630F98DF2110ADAA2332 /* CSRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRandom.h; sourceTree = "<group>"; };
+		592594A52226939B2638D721 /* CSTestSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTestSupport.h; sourceTree = "<group>"; };
+		5B18F9DE52376856E6940A31 /* CSPixelLabelNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPixelLabelNode.m; sourceTree = "<group>"; };
+		5C65794FE9884DDC975ECF1F /* CSAssetCatalog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAssetCatalog.m; sourceTree = "<group>"; };
+		6246E3E07505CA38DA9A9F35 /* CSAssetCatalog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAssetCatalog.h; sourceTree = "<group>"; };
+		6657CC1164E8306B20C4B985 /* cars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
+		6E9D289A23FAAFB76ADBC1AA /* CSSettingsScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSettingsScene.h; sourceTree = "<group>"; };
+		75165022B4680828CB0B8CE2 /* CSScreenScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSScreenScene.h; sourceTree = "<group>"; };
+		7CFF99FA5627F60B34A6BD8A /* CSMenuScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMenuScene.m; sourceTree = "<group>"; };
+		7D1A376BBE3500012EFC2D10 /* CSBriefingScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSBriefingScene.m; sourceTree = "<group>"; };
+		7DF2E4C175B45E230C959934 /* CSSliderNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSliderNode.h; sourceTree = "<group>"; };
+		7F3767F3C37F849A6DE39D59 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = CarSpeedtrack/Resources/Audio; sourceTree = SOURCE_ROOT; };
+		7FC5427CB50D6A74F77FF3D0 /* CSRoadPathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSRoadPathTests.m; sourceTree = "<group>"; };
+		804A8CD14F0A9D38A8C10664 /* CSCatalogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSCatalogTests.m; sourceTree = "<group>"; };
+		8A6C3859521585FFF31C8809 /* CSSaveManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSaveManagerTests.m; sourceTree = "<group>"; };
+		8D9DB2BA65CF9E7B14F42400 /* CSAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAudioManager.h; sourceTree = "<group>"; };
+		99F41C7389201F9619C4D116 /* CSAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAudioManager.m; sourceTree = "<group>"; };
+		9BF1C502288615BD4AA84943 /* CSMenuScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSMenuScene.h; sourceTree = "<group>"; };
+		A154C4F3B917663634133A71 /* CarSpeedtrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarSpeedtrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB4DE9FC3313D57C2871C8A5 /* CSRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSRandom.m; sourceTree = "<group>"; };
+		AE6EF53034EA5ABEB724C1E5 /* CSSaveManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSaveManager.h; sourceTree = "<group>"; };
+		B1B5C6ED795DD7AEE6AA0DC4 /* art_manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = art_manifest.json; sourceTree = "<group>"; };
+		B840588608624B44A80A3D05 /* CSSettingsScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSettingsScene.m; sourceTree = "<group>"; };
+		B9AB0AC68A5E99C23762A67B /* CSGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameViewController.m; sourceTree = "<group>"; };
+		BF30DA7333C98465AAE217F9 /* CSScoresScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSScoresScene.h; sourceTree = "<group>"; };
+		C2E49FEA55E43405FA0F4D59 /* CSSaveManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSSaveManager.m; sourceTree = "<group>"; };
+		C42DAEA5441889504D2527C5 /* font.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = font.json; sourceTree = "<group>"; };
+		C6EC9F6A4A059D940B2D9AD0 /* CSRoadPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSRoadPath.m; sourceTree = "<group>"; };
+		C8417D3F4ABDA1E41A9F3006 /* audio_manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = audio_manifest.json; sourceTree = "<group>"; };
+		CBCEABA702F4EFFBA8232EFD /* CSGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameScene.h; sourceTree = "<group>"; };
+		CC02E9AC8AD1D8C47A1D3D93 /* CSPixelLabelNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSPixelLabelNode.h; sourceTree = "<group>"; };
+		CD3E0B31515B309E1940100D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = CarSpeedtrack/Resources/Data; sourceTree = SOURCE_ROOT; };
+		CD60A543D880012F51A91D60 /* CSGameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameView.h; sourceTree = "<group>"; };
+		D2089E3CDAD3DA74DE38D96F /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
+		D615422527261F6F6B65A6FB /* CSGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameScene.m; sourceTree = "<group>"; };
+		D6F04B7DC8828AE1D441CE7E /* CSAppContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppContext.m; sourceTree = "<group>"; };
+		DBA1E5884FC72C5562C5DC72 /* CSGameSessionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameSessionTests.m; sourceTree = "<group>"; };
+		DFC4D4813A2B2E98F8CCFBDA /* CSModels.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSModels.m; sourceTree = "<group>"; };
+		E535D37600161C2811B3B615 /* CSRoadPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRoadPath.h; sourceTree = "<group>"; };
+		E7C2FC8639D6CF244C410408 /* CSGameSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGameSession.m; sourceTree = "<group>"; };
+		EA418EA7F6F31C13BFFCB8BB /* CSResultsScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSResultsScene.h; sourceTree = "<group>"; };
+		EB7F6A394270CE7ADBDE9716 /* CSGameCatalog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGameCatalog.h; sourceTree = "<group>"; };
+		EBDDD065FD1E4B2F86072886 /* CSLevelSelectScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSLevelSelectScene.m; sourceTree = "<group>"; };
+		EBE8F28772EF200AA4DB0DA4 /* levels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = levels.json; sourceTree = "<group>"; };
+		F32C4264A91F760B22DB97C6 /* CSBriefingScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSBriefingScene.h; sourceTree = "<group>"; };
+		F7BA69A9790C798FBA34E686 /* CSPixelPanelNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSPixelPanelNode.m; sourceTree = "<group>"; };
+		FD11A681580CDBA9DC9111F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		221CB6175678354EB7FFADA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE243D80C758DC0AC78A4EA /* libCarSpeedtrackCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D7287837B6102BC4CB986C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D164DDA404019D3F4025B9 /* libCarSpeedtrackCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BC4DDA205632F89617562E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C8417D3F4ABDA1E41A9F3006 /* audio_manifest.json */,
+				6657CC1164E8306B20C4B985 /* cars.json */,
+				C42DAEA5441889504D2527C5 /* font.json */,
+				EBE8F28772EF200AA4DB0DA4 /* levels.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		29A179DFEE0AA5276D2EE6EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07431C04306F011508546C77 /* CarSpeedtrack.app */,
+				A154C4F3B917663634133A71 /* CarSpeedtrackTests.xctest */,
+				2403A4D5EC1E6A57865E4AE6 /* libCarSpeedtrackCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C13B3F1CBCDDD0676BAEF4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6246E3E07505CA38DA9A9F35 /* CSAssetCatalog.h */,
+				5C65794FE9884DDC975ECF1F /* CSAssetCatalog.m */,
+				F32C4264A91F760B22DB97C6 /* CSBriefingScene.h */,
+				7D1A376BBE3500012EFC2D10 /* CSBriefingScene.m */,
+				0D730C31DFED2658E2565B91 /* CSGarageScene.h */,
+				3D03BD1F1ACA6D928B7E2EE1 /* CSGarageScene.m */,
+				10A0625ABA759C64E46B4DDF /* CSLevelSelectScene.h */,
+				EBDDD065FD1E4B2F86072886 /* CSLevelSelectScene.m */,
+				9BF1C502288615BD4AA84943 /* CSMenuScene.h */,
+				7CFF99FA5627F60B34A6BD8A /* CSMenuScene.m */,
+				11C61C0ADC2A04D6679A8CC7 /* CSPixelButtonNode.h */,
+				4E73E23DA9DBCFB3DA95CBB3 /* CSPixelButtonNode.m */,
+				CC02E9AC8AD1D8C47A1D3D93 /* CSPixelLabelNode.h */,
+				5B18F9DE52376856E6940A31 /* CSPixelLabelNode.m */,
+				1014949E2711FB55F42F67A4 /* CSPixelPanelNode.h */,
+				F7BA69A9790C798FBA34E686 /* CSPixelPanelNode.m */,
+				EA418EA7F6F31C13BFFCB8BB /* CSResultsScene.h */,
+				3C71566974DE6B5FFF679107 /* CSResultsScene.m */,
+				BF30DA7333C98465AAE217F9 /* CSScoresScene.h */,
+				1D71AEC967B96CC53F9F819B /* CSScoresScene.m */,
+				75165022B4680828CB0B8CE2 /* CSScreenScene.h */,
+				1164AC0687F8CC755A6C5770 /* CSScreenScene.m */,
+				6E9D289A23FAAFB76ADBC1AA /* CSSettingsScene.h */,
+				B840588608624B44A80A3D05 /* CSSettingsScene.m */,
+				7DF2E4C175B45E230C959934 /* CSSliderNode.h */,
+				3F1FF062033E7E08F259CB43 /* CSSliderNode.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6EFD392A4FFA054386516174 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				B1B5C6ED795DD7AEE6AA0DC4 /* art_manifest.json */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		79585C65CFF16BB997CCD399 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3324A09F718BD55FC9982358 /* CSAppContext.h */,
+				D6F04B7DC8828AE1D441CE7E /* CSAppContext.m */,
+				D2089E3CDAD3DA74DE38D96F /* CSAppDelegate.h */,
+				39D867A05EE086B1D4DBE4AB /* CSAppDelegate.m */,
+				CD60A543D880012F51A91D60 /* CSGameView.h */,
+				217EB2CE7DCE37FF0874614A /* CSGameView.m */,
+				1A660ABBB8005B17B5D6672B /* CSGameViewController.h */,
+				B9AB0AC68A5E99C23762A67B /* CSGameViewController.m */,
+				29CE69F2E0F4DCE8A8EE9E07 /* main.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94F30BC76ECA00949DAD5345 = {
+			isa = PBXGroup;
+			children = (
+				CE69145023EC700054AB6A16 /* CarSpeedtrack */,
+				C1A83E2DEAEA3EEF1C114B88 /* CarSpeedtrackTests */,
+				29A179DFEE0AA5276D2EE6EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BF868F2021A6F2166A32CE4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EB7F6A394270CE7ADBDE9716 /* CSGameCatalog.h */,
+				31B58DFC271CB8DC181427E6 /* CSGameCatalog.m */,
+				28EAE49F70DD8C245C5624A8 /* CSGameSession.h */,
+				E7C2FC8639D6CF244C410408 /* CSGameSession.m */,
+				4A9241D515AC004E684F9E55 /* CSModels.h */,
+				DFC4D4813A2B2E98F8CCFBDA /* CSModels.m */,
+				519C630F98DF2110ADAA2332 /* CSRandom.h */,
+				AB4DE9FC3313D57C2871C8A5 /* CSRandom.m */,
+				E535D37600161C2811B3B615 /* CSRoadPath.h */,
+				C6EC9F6A4A059D940B2D9AD0 /* CSRoadPath.m */,
+				AE6EF53034EA5ABEB724C1E5 /* CSSaveManager.h */,
+				C2E49FEA55E43405FA0F4D59 /* CSSaveManager.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C1A83E2DEAEA3EEF1C114B88 /* CarSpeedtrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				383AFFF684BFC8548E4B00DF /* CSAssetManifestTests.m */,
+				804A8CD14F0A9D38A8C10664 /* CSCatalogTests.m */,
+				DBA1E5884FC72C5562C5DC72 /* CSGameSessionTests.m */,
+				7FC5427CB50D6A74F77FF3D0 /* CSRoadPathTests.m */,
+				8A6C3859521585FFF31C8809 /* CSSaveManagerTests.m */,
+				592594A52226939B2638D721 /* CSTestSupport.h */,
+				1B872CDE3503C2AD7959AAA6 /* CSTestSupport.m */,
+			);
+			path = CarSpeedtrackTests;
+			sourceTree = "<group>";
+		};
+		C6D1647C564EB445515BC54F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EFD392A4FFA054386516174 /* Art */,
+				0BC4DDA205632F89617562E8 /* Data */,
+				50F1BECED4249BF609C5AA3D /* Art */,
+				FD11A681580CDBA9DC9111F5 /* Assets.xcassets */,
+				7F3767F3C37F849A6DE39D59 /* Audio */,
+				CD3E0B31515B309E1940100D /* Data */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE69145023EC700054AB6A16 /* CarSpeedtrack */ = {
+			isa = PBXGroup;
+			children = (
+				79585C65CFF16BB997CCD399 /* App */,
+				DA51BF871FAC92DE3FF3FB2F /* Audio */,
+				9BF868F2021A6F2166A32CE4 /* Core */,
+				D9CDE99C82E71D4E7184F074 /* Game */,
+				C6D1647C564EB445515BC54F /* Resources */,
+				48C13B3F1CBCDDD0676BAEF4 /* UI */,
+			);
+			path = CarSpeedtrack;
+			sourceTree = "<group>";
+		};
+		D9CDE99C82E71D4E7184F074 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				CBCEABA702F4EFFBA8232EFD /* CSGameScene.h */,
+				D615422527261F6F6B65A6FB /* CSGameScene.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		DA51BF871FAC92DE3FF3FB2F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				8D9DB2BA65CF9E7B14F42400 /* CSAudioManager.h */,
+				99F41C7389201F9619C4D116 /* CSAudioManager.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25AC73700E0D53B423FCBD64 /* CarSpeedtrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5EDD831F9CE99AB9B5037AE /* Build configuration list for PBXNativeTarget "CarSpeedtrack" */;
+			buildPhases = (
+				2D4E0B677E97F2BF5C06C28C /* Sources */,
+				D0566D64DA73591BDC9C4EDE /* Resources */,
+				221CB6175678354EB7FFADA4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13741057216184D37913F485 /* PBXTargetDependency */,
+			);
+			name = CarSpeedtrack;
+			packageProductDependencies = (
+			);
+			productName = CarSpeedtrack;
+			productReference = 07431C04306F011508546C77 /* CarSpeedtrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAEF2873E99DCD0A9F6A7A2F /* CarSpeedtrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A807A4964FF1967BC56C033 /* Build configuration list for PBXNativeTarget "CarSpeedtrackTests" */;
+			buildPhases = (
+				C4C6BA5ABF447510162F7027 /* Sources */,
+				F55A4D7145F4E19C904688B6 /* Resources */,
+				F3D7287837B6102BC4CB986C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73215EC8E7052BFB98FC2329 /* PBXTargetDependency */,
+			);
+			name = CarSpeedtrackTests;
+			packageProductDependencies = (
+			);
+			productName = CarSpeedtrackTests;
+			productReference = A154C4F3B917663634133A71 /* CarSpeedtrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F938DD354C6D582E6937765C /* CarSpeedtrackCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75867BA3A1A6A49C4815B6A /* Build configuration list for PBXNativeTarget "CarSpeedtrackCore" */;
+			buildPhases = (
+				00BC4A3D0E4D4B516FF34767 /* CopyFiles */,
+				51A841C58175174F466275AE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarSpeedtrackCore;
+			packageProductDependencies = (
+			);
+			productName = CarSpeedtrackCore;
+			productReference = 2403A4D5EC1E6A57865E4AE6 /* libCarSpeedtrackCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D116D7A66893FE5A0801436 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					25AC73700E0D53B423FCBD64 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					CAEF2873E99DCD0A9F6A7A2F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					F938DD354C6D582E6937765C = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 7F01AF6B386E5166F29B9BCB /* Build configuration list for PBXProject "CarSpeedtrack" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 94F30BC76ECA00949DAD5345;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 29A179DFEE0AA5276D2EE6EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F938DD354C6D582E6937765C /* CarSpeedtrackCore */,
+				25AC73700E0D53B423FCBD64 /* CarSpeedtrack */,
+				CAEF2873E99DCD0A9F6A7A2F /* CarSpeedtrackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0566D64DA73591BDC9C4EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E027DB04429FBF498E07C9B /* Art in Resources */,
+				43119FEF0791C74EF4731AD7 /* Assets.xcassets in Resources */,
+				D0917BECB297BA5073052A44 /* Audio in Resources */,
+				2AFF71A6A0645DA6A0CCC755 /* Data in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55A4D7145F4E19C904688B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ACD3DDED41633E1654E3D9C /* art_manifest.json in Resources */,
+				05AB23F4D37473EED690F417 /* audio_manifest.json in Resources */,
+				1302AB0D58A7138A92853630 /* cars.json in Resources */,
+				C486E86047D5917A3C8DA931 /* font.json in Resources */,
+				EE991C837112B8B9F2908B46 /* levels.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D4E0B677E97F2BF5C06C28C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A011CD43D40ABB51D867E61 /* CSAppContext.m in Sources */,
+				410D6FF5489C5C217A6BAAE6 /* CSAppDelegate.m in Sources */,
+				3942975D12203C3E44A37501 /* CSAssetCatalog.m in Sources */,
+				5A131FAE306B9DA64B5F1E22 /* CSAudioManager.m in Sources */,
+				0C85E431E35C905DD6DC6D4A /* CSBriefingScene.m in Sources */,
+				CC7AA10B633B34F890A7746C /* CSGameScene.m in Sources */,
+				915B43970A38B00999D56BA0 /* CSGameView.m in Sources */,
+				FED614EA3D26A5F904AE5D32 /* CSGameViewController.m in Sources */,
+				D156FBDDA2FC8B923109961E /* CSGarageScene.m in Sources */,
+				C3C4D1A2357785B05E9718DA /* CSLevelSelectScene.m in Sources */,
+				CA6C4AF8F325507988DE0725 /* CSMenuScene.m in Sources */,
+				4BF2A8395882EAC19FCEDC66 /* CSPixelButtonNode.m in Sources */,
+				4460B37784E48920C2701BF3 /* CSPixelLabelNode.m in Sources */,
+				4BB4497599A765C7BE31B346 /* CSPixelPanelNode.m in Sources */,
+				11B2ED79FADDAA3C7F850AE5 /* CSResultsScene.m in Sources */,
+				9DAA8A8C6D9DD2D6A75A36E8 /* CSScoresScene.m in Sources */,
+				51177E61D73B4A42A33EA2EE /* CSScreenScene.m in Sources */,
+				952CE9D5DD77B1020EAB5817 /* CSSettingsScene.m in Sources */,
+				DC332573E1F6F1EDCE50AB38 /* CSSliderNode.m in Sources */,
+				220E0FECC846B1DF4E33ED78 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A841C58175174F466275AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC47EE417119AD3EFA8CCD93 /* CSGameCatalog.m in Sources */,
+				32BC0A4CF7E3E50E758B5D57 /* CSGameSession.m in Sources */,
+				6A704A46CAFF9617CC9BAF42 /* CSModels.m in Sources */,
+				8421C1317B0F6F08F501FDBA /* CSRandom.m in Sources */,
+				08D1AC01C341EE66585845FE /* CSRoadPath.m in Sources */,
+				7656C7782E6E0D6C3869C5F3 /* CSSaveManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C6BA5ABF447510162F7027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				382DF56C8DCB25059DBD6A06 /* CSAssetManifestTests.m in Sources */,
+				F4AEDCCF68B8870BFA31E5E2 /* CSCatalogTests.m in Sources */,
+				07C7F58ED0F84CF148E7C6C0 /* CSGameSessionTests.m in Sources */,
+				888B155643CA75E49F929059 /* CSRoadPathTests.m in Sources */,
+				00CCA99EF575DDE3B40B0775 /* CSSaveManagerTests.m in Sources */,
+				E9D60EF2CC66B25AC71D3E97 /* CSTestSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13741057216184D37913F485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F938DD354C6D582E6937765C /* CarSpeedtrackCore */;
+			targetProxy = 7564839E714ECB7EED44EBEA /* PBXContainerItemProxy */;
+		};
+		73215EC8E7052BFB98FC2329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F938DD354C6D582E6937765C /* CarSpeedtrackCore */;
+			targetProxy = FE6DC190E2C0E23CB693F43C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11C848FC15DB89334C42A382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CarSpeedtrack/Core",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack.tests;
+				PRODUCT_NAME = CarSpeedtrackTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1BA28A382DF48269121748DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack.core;
+				PRODUCT_NAME = CarSpeedtrackCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1BE94A9760700DDE04FEDE14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		61F2D43277E2925AC1DAA59D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack.core;
+				PRODUCT_NAME = CarSpeedtrackCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D05D2666C8D2F3812E72D71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CF42019A17D69ECE975EF023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CarSpeedtrack/Core",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack.tests;
+				PRODUCT_NAME = CarSpeedtrackTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF3A2C6FC34ED0C816B06376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CarSpeedtrack/Core",
+				);
+				INFOPLIST_FILE = CarSpeedtrack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack;
+				PRODUCT_NAME = CarSpeedtrack;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF1537924EC4C4978343427E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/CarSpeedtrack/Core",
+				);
+				INFOPLIST_FILE = CarSpeedtrack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.carspeedtrack;
+				PRODUCT_NAME = CarSpeedtrack;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A807A4964FF1967BC56C033 /* Build configuration list for PBXNativeTarget "CarSpeedtrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF42019A17D69ECE975EF023 /* Debug */,
+				11C848FC15DB89334C42A382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F01AF6B386E5166F29B9BCB /* Build configuration list for PBXProject "CarSpeedtrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BE94A9760700DDE04FEDE14 /* Debug */,
+				8D05D2666C8D2F3812E72D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A75867BA3A1A6A49C4815B6A /* Build configuration list for PBXNativeTarget "CarSpeedtrackCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA28A382DF48269121748DC /* Debug */,
+				61F2D43277E2925AC1DAA59D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5EDD831F9CE99AB9B5037AE /* Build configuration list for PBXNativeTarget "CarSpeedtrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3A2C6FC34ED0C816B06376 /* Debug */,
+				EF1537924EC4C4978343427E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D116D7A66893FE5A0801436 /* Project object */;
+}

@@ -1,0 +1,1707 @@
+{
+  "version": 1,
+  "nearestFiltering": true,
+  "assets": [
+    {
+      "name": "bg_menu",
+      "file": "bg_menu.png",
+      "width": 640,
+      "height": 360,
+      "category": "background"
+    },
+    {
+      "name": "bg_screen",
+      "file": "bg_screen.png",
+      "width": 640,
+      "height": 360,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_1",
+      "file": "bg_world_1.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_10",
+      "file": "bg_world_10.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_2",
+      "file": "bg_world_2.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_3",
+      "file": "bg_world_3.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_4",
+      "file": "bg_world_4.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_5",
+      "file": "bg_world_5.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_6",
+      "file": "bg_world_6.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_7",
+      "file": "bg_world_7.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_8",
+      "file": "bg_world_8.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "bg_world_9",
+      "file": "bg_world_9.png",
+      "width": 640,
+      "height": 120,
+      "category": "background"
+    },
+    {
+      "name": "car_aqua-ace_0",
+      "file": "car_aqua-ace_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_aqua-ace_1",
+      "file": "car_aqua-ace_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_aqua-ace_2",
+      "file": "car_aqua-ace_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_aqua-ace_3",
+      "file": "car_aqua-ace_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_berry-bolt_0",
+      "file": "car_berry-bolt_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_berry-bolt_1",
+      "file": "car_berry-bolt_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_berry-bolt_2",
+      "file": "car_berry-bolt_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_berry-bolt_3",
+      "file": "car_berry-bolt_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_coral-cruiser_0",
+      "file": "car_coral-cruiser_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_coral-cruiser_1",
+      "file": "car_coral-cruiser_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_coral-cruiser_2",
+      "file": "car_coral-cruiser_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_coral-cruiser_3",
+      "file": "car_coral-cruiser_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_lemon-lightning_0",
+      "file": "car_lemon-lightning_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_lemon-lightning_1",
+      "file": "car_lemon-lightning_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_lemon-lightning_2",
+      "file": "car_lemon-lightning_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_lemon-lightning_3",
+      "file": "car_lemon-lightning_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_mint-mini_0",
+      "file": "car_mint-mini_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_mint-mini_1",
+      "file": "car_mint-mini_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_mint-mini_2",
+      "file": "car_mint-mini_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_mint-mini_3",
+      "file": "car_mint-mini_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_rainbow-rocket_0",
+      "file": "car_rainbow-rocket_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_rainbow-rocket_1",
+      "file": "car_rainbow-rocket_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_rainbow-rocket_2",
+      "file": "car_rainbow-rocket_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_rainbow-rocket_3",
+      "file": "car_rainbow-rocket_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_sunny-bug_0",
+      "file": "car_sunny-bug_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_sunny-bug_1",
+      "file": "car_sunny-bug_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_sunny-bug_2",
+      "file": "car_sunny-bug_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_sunny-bug_3",
+      "file": "car_sunny-bug_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_tangerine-turbo_0",
+      "file": "car_tangerine-turbo_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_tangerine-turbo_1",
+      "file": "car_tangerine-turbo_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_tangerine-turbo_2",
+      "file": "car_tangerine-turbo_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "car_tangerine-turbo_3",
+      "file": "car_tangerine-turbo_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "car"
+    },
+    {
+      "name": "decor_10_0",
+      "file": "decor_10_0.png",
+      "width": 36,
+      "height": 54,
+      "category": "decor"
+    },
+    {
+      "name": "decor_10_1",
+      "file": "decor_10_1.png",
+      "width": 32,
+      "height": 50,
+      "category": "decor"
+    },
+    {
+      "name": "decor_10_2",
+      "file": "decor_10_2.png",
+      "width": 32,
+      "height": 50,
+      "category": "decor"
+    },
+    {
+      "name": "decor_1_0",
+      "file": "decor_1_0.png",
+      "width": 44,
+      "height": 60,
+      "category": "decor"
+    },
+    {
+      "name": "decor_1_1",
+      "file": "decor_1_1.png",
+      "width": 36,
+      "height": 36,
+      "category": "decor"
+    },
+    {
+      "name": "decor_1_2",
+      "file": "decor_1_2.png",
+      "width": 38,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_2_0",
+      "file": "decor_2_0.png",
+      "width": 30,
+      "height": 56,
+      "category": "decor"
+    },
+    {
+      "name": "decor_2_1",
+      "file": "decor_2_1.png",
+      "width": 34,
+      "height": 58,
+      "category": "decor"
+    },
+    {
+      "name": "decor_2_2",
+      "file": "decor_2_2.png",
+      "width": 32,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_3_0",
+      "file": "decor_3_0.png",
+      "width": 36,
+      "height": 56,
+      "category": "decor"
+    },
+    {
+      "name": "decor_3_1",
+      "file": "decor_3_1.png",
+      "width": 38,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_3_2",
+      "file": "decor_3_2.png",
+      "width": 30,
+      "height": 36,
+      "category": "decor"
+    },
+    {
+      "name": "decor_4_0",
+      "file": "decor_4_0.png",
+      "width": 32,
+      "height": 52,
+      "category": "decor"
+    },
+    {
+      "name": "decor_4_1",
+      "file": "decor_4_1.png",
+      "width": 34,
+      "height": 38,
+      "category": "decor"
+    },
+    {
+      "name": "decor_4_2",
+      "file": "decor_4_2.png",
+      "width": 40,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_5_0",
+      "file": "decor_5_0.png",
+      "width": 46,
+      "height": 58,
+      "category": "decor"
+    },
+    {
+      "name": "decor_5_1",
+      "file": "decor_5_1.png",
+      "width": 36,
+      "height": 36,
+      "category": "decor"
+    },
+    {
+      "name": "decor_5_2",
+      "file": "decor_5_2.png",
+      "width": 40,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_6_0",
+      "file": "decor_6_0.png",
+      "width": 44,
+      "height": 62,
+      "category": "decor"
+    },
+    {
+      "name": "decor_6_1",
+      "file": "decor_6_1.png",
+      "width": 44,
+      "height": 52,
+      "category": "decor"
+    },
+    {
+      "name": "decor_6_2",
+      "file": "decor_6_2.png",
+      "width": 34,
+      "height": 30,
+      "category": "decor"
+    },
+    {
+      "name": "decor_7_0",
+      "file": "decor_7_0.png",
+      "width": 32,
+      "height": 50,
+      "category": "decor"
+    },
+    {
+      "name": "decor_7_1",
+      "file": "decor_7_1.png",
+      "width": 46,
+      "height": 38,
+      "category": "decor"
+    },
+    {
+      "name": "decor_7_2",
+      "file": "decor_7_2.png",
+      "width": 34,
+      "height": 40,
+      "category": "decor"
+    },
+    {
+      "name": "decor_8_0",
+      "file": "decor_8_0.png",
+      "width": 40,
+      "height": 60,
+      "category": "decor"
+    },
+    {
+      "name": "decor_8_1",
+      "file": "decor_8_1.png",
+      "width": 40,
+      "height": 34,
+      "category": "decor"
+    },
+    {
+      "name": "decor_8_2",
+      "file": "decor_8_2.png",
+      "width": 34,
+      "height": 52,
+      "category": "decor"
+    },
+    {
+      "name": "decor_9_0",
+      "file": "decor_9_0.png",
+      "width": 38,
+      "height": 50,
+      "category": "decor"
+    },
+    {
+      "name": "decor_9_1",
+      "file": "decor_9_1.png",
+      "width": 36,
+      "height": 42,
+      "category": "decor"
+    },
+    {
+      "name": "decor_9_2",
+      "file": "decor_9_2.png",
+      "width": 36,
+      "height": 40,
+      "category": "decor"
+    },
+    {
+      "name": "glyph_032",
+      "file": "glyph_032.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_033",
+      "file": "glyph_033.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_034",
+      "file": "glyph_034.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_035",
+      "file": "glyph_035.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_036",
+      "file": "glyph_036.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_037",
+      "file": "glyph_037.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_038",
+      "file": "glyph_038.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_039",
+      "file": "glyph_039.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_040",
+      "file": "glyph_040.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_041",
+      "file": "glyph_041.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_042",
+      "file": "glyph_042.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_043",
+      "file": "glyph_043.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_044",
+      "file": "glyph_044.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_045",
+      "file": "glyph_045.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_046",
+      "file": "glyph_046.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_047",
+      "file": "glyph_047.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_048",
+      "file": "glyph_048.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_049",
+      "file": "glyph_049.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_050",
+      "file": "glyph_050.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_051",
+      "file": "glyph_051.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_052",
+      "file": "glyph_052.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_053",
+      "file": "glyph_053.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_054",
+      "file": "glyph_054.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_055",
+      "file": "glyph_055.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_056",
+      "file": "glyph_056.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_057",
+      "file": "glyph_057.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_058",
+      "file": "glyph_058.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_059",
+      "file": "glyph_059.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_060",
+      "file": "glyph_060.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_061",
+      "file": "glyph_061.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_062",
+      "file": "glyph_062.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_063",
+      "file": "glyph_063.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_064",
+      "file": "glyph_064.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_065",
+      "file": "glyph_065.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_066",
+      "file": "glyph_066.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_067",
+      "file": "glyph_067.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_068",
+      "file": "glyph_068.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_069",
+      "file": "glyph_069.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_070",
+      "file": "glyph_070.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_071",
+      "file": "glyph_071.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_072",
+      "file": "glyph_072.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_073",
+      "file": "glyph_073.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_074",
+      "file": "glyph_074.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_075",
+      "file": "glyph_075.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_076",
+      "file": "glyph_076.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_077",
+      "file": "glyph_077.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_078",
+      "file": "glyph_078.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_079",
+      "file": "glyph_079.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_080",
+      "file": "glyph_080.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_081",
+      "file": "glyph_081.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_082",
+      "file": "glyph_082.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_083",
+      "file": "glyph_083.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_084",
+      "file": "glyph_084.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_085",
+      "file": "glyph_085.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_086",
+      "file": "glyph_086.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_087",
+      "file": "glyph_087.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_088",
+      "file": "glyph_088.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_089",
+      "file": "glyph_089.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_090",
+      "file": "glyph_090.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_091",
+      "file": "glyph_091.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_092",
+      "file": "glyph_092.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_093",
+      "file": "glyph_093.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_094",
+      "file": "glyph_094.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_095",
+      "file": "glyph_095.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_096",
+      "file": "glyph_096.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_097",
+      "file": "glyph_097.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_098",
+      "file": "glyph_098.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_099",
+      "file": "glyph_099.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_100",
+      "file": "glyph_100.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_101",
+      "file": "glyph_101.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_102",
+      "file": "glyph_102.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_103",
+      "file": "glyph_103.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_104",
+      "file": "glyph_104.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_105",
+      "file": "glyph_105.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_106",
+      "file": "glyph_106.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_107",
+      "file": "glyph_107.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_108",
+      "file": "glyph_108.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_109",
+      "file": "glyph_109.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_110",
+      "file": "glyph_110.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_111",
+      "file": "glyph_111.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_112",
+      "file": "glyph_112.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_113",
+      "file": "glyph_113.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_114",
+      "file": "glyph_114.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_115",
+      "file": "glyph_115.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_116",
+      "file": "glyph_116.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_117",
+      "file": "glyph_117.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_118",
+      "file": "glyph_118.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_119",
+      "file": "glyph_119.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_120",
+      "file": "glyph_120.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_121",
+      "file": "glyph_121.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_122",
+      "file": "glyph_122.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_123",
+      "file": "glyph_123.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_124",
+      "file": "glyph_124.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_125",
+      "file": "glyph_125.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "glyph_126",
+      "file": "glyph_126.png",
+      "width": 12,
+      "height": 20,
+      "category": "glyph"
+    },
+    {
+      "name": "ground_1",
+      "file": "ground_1.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_10",
+      "file": "ground_10.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_2",
+      "file": "ground_2.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_3",
+      "file": "ground_3.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_4",
+      "file": "ground_4.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_5",
+      "file": "ground_5.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_6",
+      "file": "ground_6.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_7",
+      "file": "ground_7.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_8",
+      "file": "ground_8.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "ground_9",
+      "file": "ground_9.png",
+      "width": 64,
+      "height": 64,
+      "category": "ground"
+    },
+    {
+      "name": "hazard_asteroid_0",
+      "file": "hazard_asteroid_0.png",
+      "width": 30,
+      "height": 30,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_asteroid_1",
+      "file": "hazard_asteroid_1.png",
+      "width": 30,
+      "height": 30,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_beachball_0",
+      "file": "hazard_beachball_0.png",
+      "width": 28,
+      "height": 28,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_beachball_1",
+      "file": "hazard_beachball_1.png",
+      "width": 28,
+      "height": 28,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_cone",
+      "file": "hazard_cone.png",
+      "width": 20,
+      "height": 26,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_ember_0",
+      "file": "hazard_ember_0.png",
+      "width": 24,
+      "height": 26,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_ember_1",
+      "file": "hazard_ember_1.png",
+      "width": 24,
+      "height": 26,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_jelly",
+      "file": "hazard_jelly.png",
+      "width": 32,
+      "height": 22,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_pothole",
+      "file": "hazard_pothole.png",
+      "width": 32,
+      "height": 22,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_puddle",
+      "file": "hazard_puddle.png",
+      "width": 34,
+      "height": 20,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_snowball_0",
+      "file": "hazard_snowball_0.png",
+      "width": 26,
+      "height": 26,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_snowball_1",
+      "file": "hazard_snowball_1.png",
+      "width": 26,
+      "height": 26,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_spike",
+      "file": "hazard_spike.png",
+      "width": 34,
+      "height": 18,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_tumbleweed_0",
+      "file": "hazard_tumbleweed_0.png",
+      "width": 28,
+      "height": 28,
+      "category": "hazard"
+    },
+    {
+      "name": "hazard_tumbleweed_1",
+      "file": "hazard_tumbleweed_1.png",
+      "width": 28,
+      "height": 28,
+      "category": "hazard"
+    },
+    {
+      "name": "icon_arrow_left",
+      "file": "icon_arrow_left.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_arrow_right",
+      "file": "icon_arrow_right.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_back",
+      "file": "icon_back.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_boost",
+      "file": "icon_boost.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_check",
+      "file": "icon_check.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_coin",
+      "file": "icon_coin.png",
+      "width": 16,
+      "height": 16,
+      "category": "icon"
+    },
+    {
+      "name": "icon_cross",
+      "file": "icon_cross.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_gear",
+      "file": "icon_gear.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_gem",
+      "file": "icon_gem.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_heart_empty",
+      "file": "icon_heart_empty.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_heart_full",
+      "file": "icon_heart_full.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_lock",
+      "file": "icon_lock.png",
+      "width": 18,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_magnet",
+      "file": "icon_magnet.png",
+      "width": 18,
+      "height": 18,
+      "category": "icon"
+    },
+    {
+      "name": "icon_pause",
+      "file": "icon_pause.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_play",
+      "file": "icon_play.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_shield",
+      "file": "icon_shield.png",
+      "width": 18,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_star_empty",
+      "file": "icon_star_empty.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_star_full",
+      "file": "icon_star_full.png",
+      "width": 20,
+      "height": 20,
+      "category": "icon"
+    },
+    {
+      "name": "icon_target",
+      "file": "icon_target.png",
+      "width": 18,
+      "height": 14,
+      "category": "icon"
+    },
+    {
+      "name": "icon_trophy",
+      "file": "icon_trophy.png",
+      "width": 20,
+      "height": 22,
+      "category": "icon"
+    },
+    {
+      "name": "logo_title",
+      "file": "logo_title.png",
+      "width": 324,
+      "height": 122,
+      "category": "logo"
+    },
+    {
+      "name": "pickup_coin_0",
+      "file": "pickup_coin_0.png",
+      "width": 16,
+      "height": 16,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_coin_1",
+      "file": "pickup_coin_1.png",
+      "width": 16,
+      "height": 16,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_coin_2",
+      "file": "pickup_coin_2.png",
+      "width": 16,
+      "height": 16,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_coin_3",
+      "file": "pickup_coin_3.png",
+      "width": 16,
+      "height": 16,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_gem",
+      "file": "pickup_gem.png",
+      "width": 18,
+      "height": 18,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_heart",
+      "file": "pickup_heart.png",
+      "width": 16,
+      "height": 16,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_magnet",
+      "file": "pickup_magnet.png",
+      "width": 18,
+      "height": 18,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_shield",
+      "file": "pickup_shield.png",
+      "width": 18,
+      "height": 20,
+      "category": "pickup"
+    },
+    {
+      "name": "pickup_star",
+      "file": "pickup_star.png",
+      "width": 20,
+      "height": 20,
+      "category": "pickup"
+    },
+    {
+      "name": "traffic_0",
+      "file": "traffic_0.png",
+      "width": 36,
+      "height": 58,
+      "category": "traffic"
+    },
+    {
+      "name": "traffic_1",
+      "file": "traffic_1.png",
+      "width": 36,
+      "height": 58,
+      "category": "traffic"
+    },
+    {
+      "name": "traffic_2",
+      "file": "traffic_2.png",
+      "width": 36,
+      "height": 58,
+      "category": "traffic"
+    },
+    {
+      "name": "traffic_3",
+      "file": "traffic_3.png",
+      "width": 36,
+      "height": 58,
+      "category": "traffic"
+    },
+    {
+      "name": "traffic_4",
+      "file": "traffic_4.png",
+      "width": 36,
+      "height": 58,
+      "category": "traffic"
+    },
+    {
+      "name": "ui_bar_mint",
+      "file": "ui_bar_mint.png",
+      "width": 32,
+      "height": 10,
+      "category": "ui"
+    },
+    {
+      "name": "ui_bar_pink",
+      "file": "ui_bar_pink.png",
+      "width": 32,
+      "height": 10,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_disabled",
+      "file": "ui_button_disabled.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_lavender",
+      "file": "ui_button_lavender.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_mint",
+      "file": "ui_button_mint.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_pink",
+      "file": "ui_button_pink.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_rose",
+      "file": "ui_button_rose.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_sky",
+      "file": "ui_button_sky.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_button_yellow",
+      "file": "ui_button_yellow.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_panel",
+      "file": "ui_panel.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_panel_cream",
+      "file": "ui_panel_cream.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_panel_dark",
+      "file": "ui_panel_dark.png",
+      "width": 32,
+      "height": 32,
+      "category": "ui"
+    },
+    {
+      "name": "ui_slider_knob",
+      "file": "ui_slider_knob.png",
+      "width": 18,
+      "height": 18,
+      "category": "ui"
+    },
+    {
+      "name": "ui_slider_track",
+      "file": "ui_slider_track.png",
+      "width": 32,
+      "height": 10,
+      "category": "ui"
+    }
+  ]
+}

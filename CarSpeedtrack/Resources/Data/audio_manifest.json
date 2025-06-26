@@ -1,0 +1,222 @@
+{
+  "sampleRate": 44100,
+  "channels": 1,
+  "music": [
+    {
+      "file": "music_menu",
+      "title": "Sunny Start",
+      "bpm": 112,
+      "root": 60,
+      "duration": 34.286,
+      "loop": true
+    },
+    {
+      "file": "music_world_1",
+      "title": "Meadow Cruise",
+      "bpm": 112,
+      "root": 60,
+      "duration": 34.286,
+      "loop": true
+    },
+    {
+      "file": "music_world_2",
+      "title": "Candy Coast",
+      "bpm": 120,
+      "root": 65,
+      "duration": 32.0,
+      "loop": true
+    },
+    {
+      "file": "music_world_3",
+      "title": "Citrus Canyon",
+      "bpm": 116,
+      "root": 67,
+      "duration": 33.103,
+      "loop": true
+    },
+    {
+      "file": "music_world_4",
+      "title": "Bubblegum City",
+      "bpm": 124,
+      "root": 69,
+      "duration": 30.968,
+      "loop": true
+    },
+    {
+      "file": "music_world_5",
+      "title": "Rainbow Ridge",
+      "bpm": 122,
+      "root": 62,
+      "duration": 31.475,
+      "loop": true
+    },
+    {
+      "file": "music_world_6",
+      "title": "Tropic Tides",
+      "bpm": 118,
+      "root": 70,
+      "duration": 32.542,
+      "loop": true
+    },
+    {
+      "file": "music_world_7",
+      "title": "Starfruit Space",
+      "bpm": 126,
+      "root": 64,
+      "duration": 30.476,
+      "loop": true
+    },
+    {
+      "file": "music_world_8",
+      "title": "Frosty Peaks",
+      "bpm": 110,
+      "root": 63,
+      "duration": 34.909,
+      "loop": true
+    },
+    {
+      "file": "music_world_9",
+      "title": "Marshmallow Volcano",
+      "bpm": 128,
+      "root": 65,
+      "duration": 30.0,
+      "loop": true
+    },
+    {
+      "file": "music_world_10",
+      "title": "Aurora Finale",
+      "bpm": 132,
+      "root": 60,
+      "duration": 29.091,
+      "loop": true
+    },
+    {
+      "file": "music_win",
+      "title": "Confetti Finish",
+      "bpm": 126,
+      "root": 60,
+      "duration": 15.488,
+      "loop": false
+    },
+    {
+      "file": "music_lose",
+      "title": "Try Again",
+      "bpm": 88,
+      "root": 57,
+      "duration": 22.068,
+      "loop": false
+    }
+  ],
+  "sfx": [
+    {
+      "file": "sfx_click",
+      "duration": 0.12,
+      "loop": false
+    },
+    {
+      "file": "sfx_hover",
+      "duration": 0.075,
+      "loop": false
+    },
+    {
+      "file": "sfx_coin",
+      "duration": 0.18,
+      "loop": false
+    },
+    {
+      "file": "sfx_gem",
+      "duration": 0.306,
+      "loop": false
+    },
+    {
+      "file": "sfx_heart",
+      "duration": 0.47,
+      "loop": false
+    },
+    {
+      "file": "sfx_shield",
+      "duration": 0.35,
+      "loop": false
+    },
+    {
+      "file": "sfx_magnet",
+      "duration": 0.36,
+      "loop": false
+    },
+    {
+      "file": "sfx_star",
+      "duration": 0.596,
+      "loop": false
+    },
+    {
+      "file": "sfx_boost",
+      "duration": 1.1,
+      "loop": false
+    },
+    {
+      "file": "sfx_nearmiss",
+      "duration": 0.28,
+      "loop": false
+    },
+    {
+      "file": "sfx_crash",
+      "duration": 0.32,
+      "loop": false
+    },
+    {
+      "file": "sfx_cone",
+      "duration": 0.2,
+      "loop": false
+    },
+    {
+      "file": "sfx_slick",
+      "duration": 0.45,
+      "loop": false
+    },
+    {
+      "file": "sfx_splash",
+      "duration": 0.35,
+      "loop": false
+    },
+    {
+      "file": "sfx_countdown",
+      "duration": 0.17,
+      "loop": false
+    },
+    {
+      "file": "sfx_go",
+      "duration": 0.33,
+      "loop": false
+    },
+    {
+      "file": "sfx_finish",
+      "duration": 1.99,
+      "loop": false
+    },
+    {
+      "file": "sfx_newbest",
+      "duration": 0.94,
+      "loop": false
+    },
+    {
+      "file": "sfx_unlock",
+      "duration": 0.92,
+      "loop": false
+    },
+    {
+      "file": "sfx_purchase",
+      "duration": 0.31,
+      "loop": false
+    },
+    {
+      "file": "engine_loop",
+      "duration": 2.0,
+      "loop": true
+    },
+    {
+      "file": "tyre_loop",
+      "duration": 2.0,
+      "loop": true
+    }
+  ]
+}

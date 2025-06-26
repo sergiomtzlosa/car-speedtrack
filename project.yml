@@ -1,0 +1,122 @@
+name: CarSpeedtrack
+options:
+  bundleIdPrefix: com.sid
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    CLANG_ENABLE_OBJC_ARC: YES
+    GCC_C_LANGUAGE_STANDARD: gnu17
+    CLANG_WARN_OBJC_LITERAL_CONVERSION: NO
+    GCC_WARN_UNDECLARED_SELECTOR: YES
+    GCC_WARN_UNUSED_FUNCTION: YES
+    GCC_WARN_UNUSED_VARIABLE: YES
+    GCC_WARN_SHADOW: YES
+    GCC_WARN_64_TO_32_BIT_CONVERSION: YES
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    ENABLE_APP_SANDBOX: NO
+    COPY_PHASE_STRIP: NO
+
+targets:
+  CarSpeedtrackCore:
+    type: library.static
+    platform: macOS
+    sources:
+      - path: CarSpeedtrack/Core
+    settings:
+      base:
+        PRODUCT_NAME: CarSpeedtrackCore
+        PRODUCT_BUNDLE_IDENTIFIER: com.sid.carspeedtrack.core
+        DEFINES_MODULE: YES
+        SKIP_INSTALL: YES
+
+  CarSpeedtrack:
+    type: application
+    platform: macOS
+    sources:
+      - path: CarSpeedtrack/App
+      - path: CarSpeedtrack/Game
+      - path: CarSpeedtrack/UI
+      - path: CarSpeedtrack/Audio
+      - path: CarSpeedtrack/Resources/Assets.xcassets
+        buildPhase: resources
+      - path: CarSpeedtrack/Resources/Art
+        type: folder
+      - path: CarSpeedtrack/Resources/Audio
+        type: folder
+      - path: CarSpeedtrack/Resources/Data
+        type: folder
+    dependencies:
+      - target: CarSpeedtrackCore
+    settings:
+      base:
+        PRODUCT_NAME: CarSpeedtrack
+        PRODUCT_BUNDLE_IDENTIFIER: com.sid.carspeedtrack
+        INFOPLIST_FILE: CarSpeedtrack/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 1
+        HEADER_SEARCH_PATHS:
+          - "$(SRCROOT)/CarSpeedtrack/Core"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/../Frameworks"
+        COMBINE_HIDPI_IMAGES: YES
+
+  CarSpeedtrackTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: CarSpeedtrackTests
+      - path: CarSpeedtrack/Resources/Data/levels.json
+        buildPhase: resources
+      - path: CarSpeedtrack/Resources/Data/cars.json
+        buildPhase: resources
+      - path: CarSpeedtrack/Resources/Data/audio_manifest.json
+        buildPhase: resources
+      - path: CarSpeedtrack/Resources/Data/font.json
+        buildPhase: resources
+      - path: CarSpeedtrack/Resources/Art/art_manifest.json
+        buildPhase: resources
+    dependencies:
+      - target: CarSpeedtrackCore
+    settings:
+      base:
+        PRODUCT_NAME: CarSpeedtrackTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.sid.carspeedtrack.tests
+        GENERATE_INFOPLIST_FILE: YES
+        HEADER_SEARCH_PATHS:
+          - "$(SRCROOT)/CarSpeedtrack/Core"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@loader_path/../Frameworks"
+          - "@executable_path/../Frameworks"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+
+schemes:
+  CarSpeedtrack:
+    build:
+      targets:
+        CarSpeedtrack: all
+        CarSpeedtrackCore: all
+        CarSpeedtrackTests: [test]
+    run:
+      config: Debug
+      executable: CarSpeedtrack
+    test:
+      config: Debug
+      gatherCoverageData: false
+      targets:
+        - CarSpeedtrackTests
+    archive:
+      config: Release

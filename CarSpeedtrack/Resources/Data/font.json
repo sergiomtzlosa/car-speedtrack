@@ -1,0 +1,9 @@
+{
+  "cellW": 12,
+  "cellH": 20,
+  "advance": 9,
+  "lineHeight": 18,
+  "firstChar": 32,
+  "lastChar": 126,
+  "font": "Monaco 15 rasterized"
+}

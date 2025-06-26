@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "cars": [
+    {
+      "id": "sunny-bug",
+      "name": "Sunny Bug",
+      "speed": 3,
+      "accel": 3,
+      "grip": 3,
+      "unlockStars": 0,
+      "tagline": "A cheerful all-rounder for every road."
+    },
+    {
+      "id": "mint-mini",
+      "name": "Mint Mini",
+      "speed": 2,
+      "accel": 4,
+      "grip": 5,
+      "unlockStars": 20,
+      "tagline": "Tiny, tidy, and impossible to fluster."
+    },
+    {
+      "id": "coral-cruiser",
+      "name": "Coral Cruiser",
+      "speed": 4,
+      "accel": 2,
+      "grip": 4,
+      "unlockStars": 50,
+      "tagline": "A relaxed cruiser with a surprisingly big heart."
+    },
+    {
+      "id": "tangerine-turbo",
+      "name": "Tangerine Turbo",
+      "speed": 5,
+      "accel": 3,
+      "grip": 2,
+      "unlockStars": 80,
+      "tagline": "Fast, loud, and always first to the picnic."
+    },
+    {
+      "id": "berry-bolt",
+      "name": "Berry Bolt",
+      "speed": 3,
+      "accel": 5,
+      "grip": 3,
+      "unlockStars": 120,
+      "tagline": "Zippy starts and sweet corner exits."
+    },
+    {
+      "id": "lemon-lightning",
+      "name": "Lemon Lightning",
+      "speed": 5,
+      "accel": 4,
+      "grip": 1,
+      "unlockStars": 160,
+      "tagline": "A dragster with absolutely no chill."
+    },
+    {
+      "id": "aqua-ace",
+      "name": "Aqua Ace",
+      "speed": 3,
+      "accel": 3,
+      "grip": 5,
+      "unlockStars": 200,
+      "tagline": "Glued to the road, even when the road is ice."
+    },
+    {
+      "id": "rainbow-rocket",
+      "name": "Rainbow Rocket",
+      "speed": 5,
+      "accel": 4,
+      "grip": 5,
+      "unlockStars": 250,
+      "tagline": "The final car. The final confetti. The final lap."
+    }
+  ]
+}
