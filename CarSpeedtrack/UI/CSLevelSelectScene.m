@@ -6,6 +6,40 @@
 #import "CSGameViewController.h"
 #import "CSPixelLabelNode.h"
 
+static NSArray<NSString *> *CSWrapLevelName(NSString *name, NSUInteger maxChars) {
+    NSString *upper = name.uppercaseString;
+    if (upper.length <= maxChars) return @[upper];
+    NSArray<NSString *> *words = [upper componentsSeparatedByString:@" "];
+    if (words.count < 2) {
+        NSString *line = upper.length > maxChars ? [[upper substringToIndex:maxChars - 3] stringByAppendingString:@"..."] : upper;
+        return @[line];
+    }
+
+    NSUInteger bestSplit = 1;
+    NSUInteger bestScore = NSUIntegerMax;
+    for (NSUInteger i = 1; i < words.count; i++) {
+        NSString *first = [[words subarrayWithRange:NSMakeRange(0, i)] componentsJoinedByString:@" "];
+        NSString *second = [[words subarrayWithRange:NSMakeRange(i, words.count - i)] componentsJoinedByString:@" "];
+        NSUInteger longest = MAX(first.length, second.length);
+        NSUInteger balance = first.length > second.length ? first.length - second.length : second.length - first.length;
+        NSUInteger score = longest * 1000 + balance;
+        if (score < bestScore) {
+            bestScore = score;
+            bestSplit = i;
+        }
+    }
+
+    NSString *line1 = [[words subarrayWithRange:NSMakeRange(0, bestSplit)] componentsJoinedByString:@" "];
+    NSString *line2 = [[words subarrayWithRange:NSMakeRange(bestSplit, words.count - bestSplit)] componentsJoinedByString:@" "];
+    if (line1.length > maxChars) {
+        line1 = [[line1 substringToIndex:maxChars - 3] stringByAppendingString:@"..."];
+    }
+    if (line2.length > maxChars) {
+        line2 = [[line2 substringToIndex:maxChars - 3] stringByAppendingString:@"..."];
+    }
+    return @[line1, line2];
+}
+
 @implementation CSLevelSelectScene {
     NSInteger _currentWorld;
     NSMutableArray<CSPixelButtonNode *> *_cardButtons;
@@ -64,11 +98,11 @@
     SKSpriteNode *star = [SKSpriteNode spriteNodeWithTexture:
         [[CSAssetCatalog shared] textureNamed:@"icon_star_full"]];
     star.size = CGSizeMake(16, 16);
-    star.position = CGPointMake(548, 338);
+    star.position = CGPointMake(536, 338);
     star.zPosition = 3;
     [self.contentRoot addChild:star];
     _starTotalLabel = [self addLabel:[NSString stringWithFormat:@"%ld / 300", (long)[CSAppContext.shared displayStars]]
-                             atPoint:CGPointMake(560, 338) scale:0.8
+                             atPoint:CGPointMake(552, 338) scale:0.7
                                color:[NSColor colorWithSRGBRed:1 green:0.94 blue:0.72 alpha:1]
                            alignment:CSPixelTextAlignmentLeft zPosition:3];
     _starTotalLabel.shadowEnabled = NO;
@@ -82,8 +116,8 @@
         CSPixelButtonNode *tab = [[CSPixelButtonNode alloc] initWithText:
             [NSString stringWithFormat:@"W%ld", (long)world.worldID]
                                                              textureName:textures[index % textures.count]
-                                                                    size:CGSizeMake(49, 20)
-                                                               fontScale:0.70];
+                                                                    size:CGSizeMake(52, 20)
+                                                               fontScale:0.66];
         tab.position = CGPointMake(58 + (CGFloat)index * 56.0, 314);
         __weak typeof(self) weakSelf = self;
         NSInteger worldID = world.worldID;
@@ -128,7 +162,7 @@
         NSInteger column = (NSInteger)i % 5;
         NSInteger row = (NSInteger)i / 5;
         CGPoint position = CGPointMake(84 + (CGFloat)column * 118.0,
-                                       231 - (CGFloat)row * 90.0);
+                                       231 - (CGFloat)row * 94.0);
         CSPixelButtonNode *card = [self makeCardForLevel:level position:position];
         [_cardButtons addObject:card];
         [self addButton:card];
@@ -146,7 +180,7 @@
 
     CSPixelButtonNode *card = [[CSPixelButtonNode alloc] initWithText:@""
                                                           textureName:completed ? @"ui_panel" : @"ui_panel_cream"
-                                                                 size:CGSizeMake(112, 82)
+                                                                 size:CGSizeMake(112, 88)
                                                             fontScale:0.62];
     card.position = position;
     card.enabled = unlocked;
@@ -159,32 +193,28 @@
         [NSString stringWithFormat:@"%02ld", (long)level.levelID] fontScale:0.95
                                                                   color:[NSColor colorWithSRGBRed:0.37 green:0.24 blue:0.44 alpha:1]];
     number.alignment = CSPixelTextAlignmentLeft;
-    number.position = CGPointMake(left, 27);
+    number.position = CGPointMake(left, 26);
     number.zPosition = 5;
     [card.panel addChild:number];
 
-    NSString *line1 = level.name.uppercaseString;
-    NSString *line2 = @"";
-    if (line1.length > 17) {
-        NSRange space = [line1 rangeOfString:@" " options:NSBackwardsSearch range:NSMakeRange(0, MIN((NSUInteger)17, line1.length))];
-        if (space.location != NSNotFound) {
-            line1 = [line1 substringToIndex:space.location];
-            line2 = [level.name.uppercaseString substringFromIndex:space.location + 1];
-        }
-    }
-    if (line1.length > 17) line1 = [[line1 substringToIndex:16] stringByAppendingString:@"..."];
-    if (line2.length > 17) line2 = [[line2 substringToIndex:16] stringByAppendingString:@"..."];
+    // The card's usable width is 96 px. At 12 pt Menlo a line fits 13
+    // characters, so wrap on word boundaries instead of counting to 17.
+    NSArray<NSString *> *nameLines = CSWrapLevelName(level.name, 13);
+    NSString *line1 = nameLines.firstObject;
+    NSString *line2 = nameLines.count > 1 ? nameLines[1] : @"";
     BOOL twoLines = line2.length > 0;
-    CGFloat nameY = twoLines ? 11 : 4;
+    CGFloat nameY = twoLines ? 9 : 3;
     CSPixelLabelNode *name = [[CSPixelLabelNode alloc] initWithText:line1 fontScale:0.62
                                                               color:[NSColor colorWithSRGBRed:0.25 green:0.16 blue:0.30 alpha:1]];
     name.position = CGPointMake(0, nameY);
+    name.maxWidth = 96;
     name.zPosition = 5;
     [card.panel addChild:name];
     if (twoLines) {
         CSPixelLabelNode *second = [[CSPixelLabelNode alloc] initWithText:line2 fontScale:0.62
                                                                    color:[NSColor colorWithSRGBRed:0.25 green:0.16 blue:0.30 alpha:1]];
-        second.position = CGPointMake(0, 0);
+        second.position = CGPointMake(0, -5);
+        second.maxWidth = 96;
         second.zPosition = 5;
         [card.panel addChild:second];
     }
@@ -193,11 +223,11 @@
         SKSpriteNode *lock = [SKSpriteNode spriteNodeWithTexture:
             [[CSAssetCatalog shared] textureNamed:@"icon_lock"]];
         lock.size = CGSizeMake(16, 18);
-        lock.position = CGPointMake(0, twoLines ? -27 : -25);
+        lock.position = CGPointMake(0, twoLines ? -23 : -21);
         lock.zPosition = 5;
         [card.panel addChild:lock];
     } else {
-        CGFloat starY = twoLines ? -17 : -12;
+        CGFloat starY = twoLines ? -17 : -15;
         for (NSInteger s = 0; s < 3; s++) {
             NSString *icon = s < stars ? @"icon_star_full" : @"icon_star_empty";
             SKSpriteNode *star = [SKSpriteNode spriteNodeWithTexture:
@@ -211,7 +241,7 @@
             CSPixelLabelNode *bestLabel = [[CSPixelLabelNode alloc] initWithText:
                 [NSString stringWithFormat:@"BEST %ld", (long)best] fontScale:0.50
                                                                          color:[NSColor colorWithSRGBRed:0.42 green:0.28 blue:0.46 alpha:0.9]];
-            bestLabel.position = CGPointMake(0, twoLines ? -31 : -27);
+            bestLabel.position = CGPointMake(0, -30);
             bestLabel.zPosition = 5;
             [card.panel addChild:bestLabel];
         }

@@ -68,6 +68,11 @@ static NSString *CSLabelFontName(void) {
     [self rebuild];
 }
 
+- (void)setMaxWidth:(CGFloat)maxWidth {
+    _maxWidth = MAX(0.0, maxWidth);
+    [self rebuild];
+}
+
 - (void)setTextColor:(NSColor *)textColor {
     _textColor = textColor ?: [NSColor whiteColor];
     for (SKLabelNode *label in _lineLabels) {
@@ -121,12 +126,16 @@ static NSString *CSLabelFontName(void) {
     return label;
 }
 
-- (void)rebuild {
-    NSString *string = self.uppercase ? self.text.uppercaseString : self.text;
-    NSArray<NSString *> *lines = [string componentsSeparatedByString:@"\n"];
-    CGFloat fontSize = MAX(9.0, CSLabelBaseFontSize * self.fontScale);
-    CGFloat lineHeight = fontSize * 1.18;
-    SKLabelHorizontalAlignmentMode horizontal = [self horizontalAlignmentMode];
+- (void)layoutLines:(NSArray<NSString *> *)lines
+           fontSize:(CGFloat)fontSize
+         horizontal:(SKLabelHorizontalAlignmentMode)horizontal {
+    // Whole-point sizes keep glyphs sharp when the scene is scaled to the
+    // window's backing resolution.
+    NSFont *font = [NSFont fontWithName:CSLabelFontName() size:fontSize]
+        ?: [NSFont systemFontOfSize:fontSize];
+    CGFloat lineHeight = MAX(fontSize, round(fontSize * 1.18));
+    CGFloat glyphHeight = ceil(font.ascender - font.descender);
+    CGFloat maxLineWidth = 0.0;
 
     for (NSUInteger i = 0; i < lines.count; i++) {
         NSString *line = lines[i].length ? lines[i] : @" ";
@@ -147,6 +156,11 @@ static NSString *CSLabelFontName(void) {
         shadow.horizontalAlignmentMode = horizontal;
         shadow.position = label.position;
         shadow.zPosition = 0.0;
+
+        // AppKit metrics match what SKLabelNode rasterizes and are available
+        // immediately, unlike calculateAccumulatedFrame before first layout.
+        NSSize measured = [line sizeWithAttributes:@{NSFontAttributeName: font}];
+        maxLineWidth = MAX(maxLineWidth, ceil(measured.width));
     }
 
     for (NSUInteger i = lines.count; i < _lineLabels.count; i++) {
@@ -154,12 +168,30 @@ static NSString *CSLabelFontName(void) {
         _shadowLabels[i].hidden = YES;
     }
 
-    CGRect bounds = [_textRoot calculateAccumulatedFrame];
-    _computedWidth = bounds.size.width;
-    _computedHeight = bounds.size.height;
-    _textRoot.position = CGPointMake(0.0, -CGRectGetMidY(bounds));
-    _shadowRoot.position = CGPointMake(1.5, _textRoot.position.y - 1.5);
+    _computedWidth = maxLineWidth;
+    _computedHeight = glyphHeight + (CGFloat)(lines.count - 1) * lineHeight;
+    _textRoot.position = CGPointMake(0.0, round((CGFloat)(lines.count - 1) * lineHeight * 0.5));
+    _shadowRoot.position = CGPointMake(2.0, _textRoot.position.y - 2.0);
     _shadowRoot.hidden = !self.shadowEnabled;
+}
+
+- (void)rebuild {
+    NSString *string = self.uppercase ? self.text.uppercaseString : self.text;
+    NSArray<NSString *> *lines = [string componentsSeparatedByString:@"\n"];
+    SKLabelHorizontalAlignmentMode horizontal = [self horizontalAlignmentMode];
+
+    // Snap the requested size to a whole point. Long labels are then reduced
+    // one point at a time until they fit the supplied width.
+    CGFloat fontSize = MAX(10.0, round(CSLabelBaseFontSize * self.fontScale));
+    [self layoutLines:lines fontSize:fontSize horizontal:horizontal];
+    if (self.maxWidth > 0.0) {
+        NSInteger guard = 0;
+        while (_computedWidth > self.maxWidth && fontSize > 9.0 && guard < 24) {
+            fontSize -= 1.0;
+            [self layoutLines:lines fontSize:fontSize horizontal:horizontal];
+            guard++;
+        }
+    }
 }
 
 @end

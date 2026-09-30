@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL showFPS;
 @property (nonatomic, copy, nullable) NSString *initialSceneName;
 @property (nonatomic) NSInteger initialLevelID;
+@property (nonatomic) BOOL scoresGlobalMode;
 @property (nonatomic, copy, nullable) NSString *snapshotPath;
 @property (nonatomic) NSTimeInterval snapshotDelay;
 @property (nonatomic, readonly) BOOL debugging;

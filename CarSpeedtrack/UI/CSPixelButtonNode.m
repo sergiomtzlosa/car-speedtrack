@@ -35,6 +35,10 @@
         _label = [[CSPixelLabelNode alloc] initWithText:text fontScale:_fontScale color:_textColor];
         _label.alignment = CSPixelTextAlignmentCenter;
         _label.position = CGPointZero;
+        // Match CSPixelPanelNode's adaptive 9-slice margin, then leave a
+        // couple of pixels of breathing room inside the plate's dark border.
+        CGFloat margin = MIN(9.0, MAX(3.5, MIN(_buttonSize.width, _buttonSize.height) * 0.22));
+        _label.maxWidth = MAX(8.0, _buttonSize.width - margin * 2.0 - 4.0);
         // The view uses ignoresSiblingOrder, so equal zPosition values have no
         // stable draw order. Keep the label explicitly above the button plate.
         _label.zPosition = 20.0;
@@ -87,8 +91,10 @@
     if (_focused == focused) return;
     _focused = focused;
     [self.panel setTint:[NSColor colorWithSRGBRed:1.0 green:0.92 blue:0.55 alpha:1.0]
-                  blend:focused ? 0.28 : 0.0];
-    self.scale = focused ? 1.035 : 1.0;
+                  blend:focused ? 0.30 : 0.0];
+    // Do not scale the button on focus: fractional node scaling resamples the
+    // text and makes it look blurry. The warm tint is the focus indicator.
+    self.scale = 1.0;
 }
 
 - (BOOL)containsScenePoint:(CGPoint)point {

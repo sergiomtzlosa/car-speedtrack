@@ -613,11 +613,12 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
                          alignment:CSPixelTextAlignmentRight zPosition:4 shadow:YES];
     _comboLabel.hidden = YES;
 
-    _hintLabel = [self addHUILabel:@"A/D STEER   W THROTTLE   S BRAKE   SPACE TURBO"
-                           atPoint:CGPointMake(320, 46) scale:0.55
-                             color:[NSColor colorWithSRGBRed:1.0 green:0.96 blue:0.85 alpha:0.92]
+    _hintLabel = [self addHUILabel:@"A/D OR ARROWS STEER   W THROTTLE   S BRAKE\nSPACE TURBO   MOUSE ALSO STEERS"
+                           atPoint:CGPointMake(320, 58) scale:0.6
+                             color:[NSColor colorWithSRGBRed:1.0 green:0.96 blue:0.85 alpha:0.98]
                          alignment:CSPixelTextAlignmentCenter zPosition:4 shadow:YES];
     _hintLabel.alpha = 0.0;
+    _hintLabel.hidden = YES;
 
     _countdownSubtitle = [self addHUILabel:@"" atPoint:CGPointMake(320, 238) scale:0.78
                                     color:cream alignment:CSPixelTextAlignmentCenter zPosition:15 shadow:YES];
@@ -695,10 +696,12 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
     }
     _soundButton.text = [CSAppContext.shared.audio isMuted] ? @"SOUND: OFF" : @"SOUND: ON";
 
-    CSPixelLabelNode *hint = [[CSPixelLabelNode alloc] initWithText:@"ESC RESUMES   R RETRIES   M MUTES"
+    CSPixelLabelNode *hint = [[CSPixelLabelNode alloc] initWithText:
+        @"ARROWS + ENTER SELECT   ESC RESUMES   R RETRY   M MUTE"
                                                               fontScale:0.50
-                                                                  color:[NSColor colorWithSRGBRed:1.0 green:0.94 blue:0.80 alpha:0.72]];
+                                                                  color:[NSColor colorWithSRGBRed:1.0 green:0.94 blue:0.80 alpha:0.82]];
     hint.position = CGPointMake(320, 43);
+    hint.maxWidth = 380;
     hint.zPosition = 2;
     [_pauseRoot addChild:hint];
 }
@@ -1348,6 +1351,7 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
     if (_result || _session == nil) return;
     _state = CSGameSceneStateEnding;
     _endingTimer = 3.1;
+    _hintLabel.hidden = YES;
     _result = [CSAppContext.shared.save recordResult:_debugResult ?: [_session makeResult]];
     _debugResult = nil;
 
@@ -1535,10 +1539,11 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
 - (void)showHint {
     if (_hintScheduled) return;
     _hintScheduled = YES;
-    _hintLabel.alpha = 0.95;
+    _hintLabel.hidden = NO;
+    _hintLabel.alpha = 0.98;
     [_hintLabel removeAllActions];
     [_hintLabel runAction:[SKAction sequence:@[
-        [SKAction waitForDuration:5.5],
+        [SKAction waitForDuration:7.0],
         [SKAction fadeOutWithDuration:0.8],
     ]]];
 }
@@ -1570,6 +1575,9 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
     _boostRequested = NO;
     _mouseThrottle = NO;
     _mouseBrake = NO;
+    // The control hint sits in the same strip as the pause help text. Hide it
+    // so the two lines cannot draw on top of each other.
+    _hintLabel.hidden = YES;
     _pauseRoot.hidden = NO;
     _soundButton.text = [CSAppContext.shared.audio isMuted] ? @"SOUND: OFF" : @"SOUND: ON";
     [self focusPauseButtonAtIndex:0];
@@ -1582,6 +1590,7 @@ static NSString *CSPickupTextureName(CSPickupKind kind, NSInteger frame) {
     if (_state != CSGameSceneStatePaused) return;
     _state = _stateBeforePause;
     _pauseRoot.hidden = YES;
+    _hintLabel.hidden = _hintLabel.alpha <= 0.01;
     [CSAppContext.shared.audio setDucked:NO];
     if (!_engineStarted) {
         [CSAppContext.shared.audio startEngine];

@@ -118,6 +118,10 @@
     [self refreshTable];
 }
 
+- (void)showGlobalMode {
+    [self setGlobalMode:YES];
+}
+
 - (void)setGlobalMode:(BOOL)global {
     if (_globalMode == global) return;
     _globalMode = global;
@@ -146,9 +150,16 @@
     NSArray<NSString *> *columns = _globalMode
         ? @[@"#", @"SCORE", @"LEVEL", @"CAR", @"MODE", @"DATE"]
         : @[@"#", @"SCORE", @"STARS", @"CAR", @"MODE", @"DATE"];
+    // Leave enough room for long car names and level titles in the global
+    // table without letting columns collide.
     NSArray<NSNumber *> *xPositions = _globalMode
-        ? @[@52, @82, @162, @292, @377, @460]
+        ? @[@52, @82, @148, @300, @405, @475]
         : @[@52, @82, @160, @235, @350, @448];
+    // Hard column bounds keep long car names, level titles, and modes from
+    // running into the next column.
+    NSArray<NSNumber *> *maxWidths = _globalMode
+        ? @[@24, @60, @144, @96, @64, @112]
+        : @[@24, @72, @66, @108, @90, @140];
 
     for (NSInteger i = 0; i < columns.count; i++) {
         CSPixelLabelNode *columnLabel = [[CSPixelLabelNode alloc] initWithText:columns[i] fontScale:0.54
@@ -196,6 +207,7 @@
                                                                        color:color];
             label.alignment = CSPixelTextAlignmentLeft;
             label.position = CGPointMake(xPositions[c].doubleValue, y);
+            label.maxWidth = maxWidths[c].doubleValue;
             label.zPosition = 5;
             [_tableRoot addChild:label];
         }

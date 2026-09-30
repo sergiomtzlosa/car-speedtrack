@@ -17,7 +17,10 @@
         }
         CGFloat w = _panelSize.width;
         CGFloat h = _panelSize.height;
-        CGFloat margin = 9.0;
+        // Keep the plate's border visually constant on short buttons. A fixed
+        // 9 px margin leaves almost no interior on an 18-22 px tall button and
+        // makes its stretched border cover the label.
+        CGFloat margin = MIN(9.0, MAX(3.5, MIN(w, h) * 0.22));
         if (w < margin * 2.2 || h < margin * 2.2) {
             SKSpriteNode *whole = [SKSpriteNode spriteNodeWithTexture:texture size:_panelSize];
             whole.anchorPoint = CGPointMake(0.5, 0.5);

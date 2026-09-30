@@ -82,11 +82,11 @@ static NSString *CSWrapWords(NSString *text, NSUInteger width) {
 
     SKSpriteNode *star = [SKSpriteNode spriteNodeWithTexture:[assets textureNamed:@"icon_star_full"]];
     star.size = CGSizeMake(16, 16);
-    star.position = CGPointMake(544, 338);
+    star.position = CGPointMake(536, 338);
     star.zPosition = 3;
     [self.contentRoot addChild:star];
     _starLabel = [self addLabel:[NSString stringWithFormat:@"%ld / 300", (long)[CSAppContext.shared displayStars]]
-                        atPoint:CGPointMake(556, 338) scale:0.8
+                        atPoint:CGPointMake(552, 338) scale:0.7
                           color:[NSColor colorWithSRGBRed:1 green:0.94 blue:0.72 alpha:1]
                       alignment:CSPixelTextAlignmentLeft zPosition:3];
     _starLabel.shadowEnabled = NO;

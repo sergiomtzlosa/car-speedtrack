@@ -161,10 +161,11 @@ static NSString *CSBriefingTextForMechanic(NSString *mechanic) {
     prev.actionBlock = ^{ [weakSelf changeDifficulty:-1]; };
     [self addButton:prev];
 
-    _difficultyLabel = [self addLabel:@"" atPoint:CGPointMake(458, 116) scale:0.68
+    _difficultyLabel = [self addLabel:@"" atPoint:CGPointMake(458, 116) scale:0.7
                                 color:[NSColor colorWithSRGBRed:0.25 green:0.15 blue:0.31 alpha:1]
                             alignment:CSPixelTextAlignmentCenter zPosition:4];
     _difficultyLabel.shadowEnabled = NO;
+    _difficultyLabel.maxWidth = 116;
 
     CSPixelButtonNode *next = [[CSPixelButtonNode alloc] initWithIcon:@"icon_arrow_right"
                                                            textureName:@"ui_button_sky"
@@ -198,8 +199,8 @@ static NSString *CSBriefingTextForMechanic(NSString *mechanic) {
     NSString *coach = _levelID == 1
         ? @"A / D OR ARROWS STEER  -  W GO  -  S BRAKE  -  SPACE TURBO"
         : @"ESC PAUSES  -  EARN STARS TO UNLOCK NEW CARS";
-    [self addLabel:coach atPoint:CGPointMake(320, 34) scale:0.54
-             color:[NSColor colorWithSRGBRed:0.35 green:0.23 blue:0.41 alpha:0.85]
+    [self addLabel:coach atPoint:CGPointMake(320, 34) scale:0.58
+             color:[NSColor colorWithSRGBRed:0.35 green:0.23 blue:0.41 alpha:0.95]
          alignment:CSPixelTextAlignmentCenter zPosition:4].shadowEnabled = NO;
 
     [self updateDifficultyLabel];
@@ -217,12 +218,9 @@ static NSString *CSBriefingTextForMechanic(NSString *mechanic) {
 }
 
 - (void)updateDifficultyLabel {
-    if (_settings.preset == CSDifficultyPresetCustom) {
-        _difficultyLabel.text = [NSString stringWithFormat:@"CUSTOM - %ld LIVES", (long)_settings.lives];
-    } else {
-        _difficultyLabel.text = [NSString stringWithFormat:@"%@ - %ld LIVES",
-                                 [_settings displayName].uppercaseString, (long)_settings.lives];
-    }
+    // Lives already appear in the track line above. Keeping this label to the
+    // preset name lets it sit comfortably between the arrow buttons.
+    _difficultyLabel.text = [_settings displayName].uppercaseString;
 }
 
 - (void)goBack {

@@ -29,6 +29,7 @@
     _showFPS = [arguments containsObject:@"--show-fps"];
     _skipCountdown = [arguments containsObject:@"--skip-countdown"];
     _unlockAll = [arguments containsObject:@"--unlock-all"];
+    _scoresGlobalMode = [arguments containsObject:@"--scores-global"];
 
     NSString *scene = [self valueForArgument:@"--scene" inArguments:arguments];
     _initialSceneName = scene ?: @"menu";
@@ -84,8 +85,10 @@
 }
 
 - (BOOL)isLevelUnlocked:(NSInteger)levelID {
-    if (self.unlockAll) return YES;
-    return levelID <= [self.save highestUnlockedLevel];
+    // All 100 levels are selectable from the start. The menu's Play button
+    // still recommends the first uncompleted level, and stars, best scores,
+    // and per-level progress continue to save normally.
+    return levelID >= 1 && levelID <= 100;
 }
 
 - (NSInteger)displayStars {

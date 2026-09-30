@@ -99,7 +99,7 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
     [self buildButtons];
 
     [self addLabel:@"ENTER SELECTS  -  ESC RETURNS TO LEVELS"
-           atPoint:CGPointMake(320, 10) scale:0.47
+           atPoint:CGPointMake(320, 10) scale:0.5
              color:[NSColor colorWithSRGBRed:1.0 green:0.90 blue:0.70 alpha:0.78]
          alignment:CSPixelTextAlignmentCenter zPosition:3].shadowEnabled = NO;
 
@@ -166,7 +166,8 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
     }
 
     if (!_result.completed) {
-        [self addLabel:@"SHAKE IT OFF - TRY AGAIN" atPoint:CGPointMake(58, 137) scale:0.52
+        // Keep the encouragement clear of the car sprite below it.
+        [self addLabel:@"SHAKE IT OFF - TRY AGAIN" atPoint:CGPointMake(58, 157) scale:0.52
                  color:[NSColor colorWithSRGBRed:0.60 green:0.38 blue:0.50 alpha:1.0]
              alignment:CSPixelTextAlignmentLeft zPosition:4].shadowEnabled = NO;
     }
@@ -176,8 +177,8 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
         SKSpriteNode *carSprite = [SKSpriteNode spriteNodeWithTexture:
             [[CSAssetCatalog shared] textureNamed:[NSString stringWithFormat:@"%@_0", car.assetPrefix]
                                         fallback:@"car_sunny-bug_0"]];
-        carSprite.size = CGSizeMake(38, 62);
-        carSprite.position = CGPointMake(220, 116);
+        carSprite.size = CGSizeMake(34, 56);
+        carSprite.position = CGPointMake(220, 118);
         carSprite.zPosition = 4;
         [self.contentRoot addChild:carSprite];
         if (!CSAppContext.shared.save.reducedMotion) {
@@ -186,7 +187,7 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
                 [SKAction moveByX:0 y:-2.0 duration:0.85],
             ]]]];
         }
-        [self addLabel:car.name.uppercaseString atPoint:CGPointMake(220, 76) scale:0.48
+        [self addLabel:car.name.uppercaseString atPoint:CGPointMake(220, 80) scale:0.48
                  color:[NSColor colorWithSRGBRed:0.48 green:0.36 blue:0.52 alpha:1.0]
              alignment:CSPixelTextAlignmentCenter zPosition:4].shadowEnabled = NO;
     }
@@ -199,12 +200,17 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
 }
 
 - (void)buildStatsColumnWithInk:(NSColor *)ink softInk:(NSColor *)softInk {
+    // recordResult: writes the run before this scene appears, so the saved best
+    // already includes a new best. Fall back to the run score for debug scenes
+    // that show a result without recording it, keeping "NEW BEST!" coherent.
+    NSInteger best = [CSAppContext.shared.save bestScoreForLevel:_result.levelID];
+    if (_result.newBest) best = MAX(best, _result.score);
     NSArray<NSArray<NSString *> *> *rows = @[
         @[@"COINS", [NSString stringWithFormat:@"%ld", (long)_result.coins]],
         @[@"BEST COMBO", [NSString stringWithFormat:@"x%ld", (long)_result.bestCombo]],
         @[@"LIVES LEFT", [NSString stringWithFormat:@"%ld", (long)MAX(0, _result.livesLeft)]],
         @[@"DIFFICULTY", _result.difficultyName.length ? _result.difficultyName.uppercaseString : @"CLASSIC"],
-        @[@"BEST SCORE", CSResultsFormatNumber([CSAppContext.shared.save bestScoreForLevel:_result.levelID])],
+        @[@"BEST SCORE", CSResultsFormatNumber(best)],
         @[@"TIME", CSResultsFormatTime(_result.duration)],
     ];
 
@@ -220,8 +226,8 @@ static NSString *CSResultsFormatTime(NSTimeInterval duration) {
     NSString *encouragement = _result.completed
         ? @"STARS UNLOCK NEW CARS IN THE GARAGE"
         : @"TIP: SLOW DOWN BEFORE THE CONES";
-    [self addLabel:encouragement atPoint:CGPointMake(306, 98) scale:0.48
-             color:[NSColor colorWithSRGBRed:0.52 green:0.40 blue:0.55 alpha:0.78]
+    [self addLabel:encouragement atPoint:CGPointMake(306, 98) scale:0.5
+             color:[NSColor colorWithSRGBRed:0.52 green:0.40 blue:0.55 alpha:0.9]
          alignment:CSPixelTextAlignmentLeft zPosition:4].shadowEnabled = NO;
 }
 

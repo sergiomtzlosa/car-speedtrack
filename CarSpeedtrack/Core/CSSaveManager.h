@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)totalStars;
 - (NSInteger)highestUnlockedLevel;
 - (NSInteger)nextLevelToPlay;
+- (BOOL)hasPlayedAnyRun;
 - (BOOL)isLevelCompleted:(NSInteger)levelID;
 - (NSInteger)starsForLevel:(NSInteger)levelID;
 - (NSInteger)bestScoreForLevel:(NSInteger)levelID;

@@ -121,21 +121,21 @@
     for (NSInteger i = 0; i < presetKeys.count; i++) {
         CSPixelButtonNode *button = [[CSPixelButtonNode alloc] initWithText:presetTitles[i]
                                                                 textureName:presetTextures[i]
-                                                                       size:CGSizeMake(52, 22)
-                                                                  fontScale:0.62];
-        button.position = CGPointMake(351 + i * 55, 231);
+                                                                       size:CGSizeMake(58, 22)
+                                                                  fontScale:0.56];
+        button.position = CGPointMake(346 + i * 58, 231);
         NSString *key = presetKeys[i];
         button.actionBlock = ^{ [weakSelf selectPreset:key]; };
         [_presetButtons addObject:button];
         [self addButton:button];
     }
     _presetMarker = [SKSpriteNode spriteNodeWithColor:[NSColor colorWithSRGBRed:0.93 green:0.44 blue:0.62 alpha:1]
-                                                 size:CGSizeMake(50, 3)];
-    _presetMarker.position = CGPointMake(351, 217);
+                                                 size:CGSizeMake(56, 3)];
+    _presetMarker.position = CGPointMake(346, 217);
     _presetMarker.zPosition = 5;
     [self.contentRoot addChild:_presetMarker];
 
-    _difficultySummary = [self addLabel:@"" atPoint:CGPointMake(324, 202) scale:0.58
+    _difficultySummary = [self addLabel:@"" atPoint:CGPointMake(324, 202) scale:0.56
                                   color:[NSColor colorWithSRGBRed:0.40 green:0.28 blue:0.44 alpha:0.9]
                               alignment:CSPixelTextAlignmentLeft zPosition:4];
     _difficultySummary.shadowEnabled = NO;
@@ -184,8 +184,8 @@
 
     CSPixelButtonNode *assist = [[CSPixelButtonNode alloc] initWithText:@"ASSIST"
                                                              textureName:@"ui_button_sky"
-                                                                    size:CGSizeMake(90, 18)
-                                                               fontScale:0.68];
+                                                                    size:CGSizeMake(90, 24)
+                                                               fontScale:0.56];
     assist.position = CGPointMake(372, 82);
     assist.actionBlock = ^{
         typeof(self) strongSelf = weakSelf;
@@ -200,8 +200,8 @@
 
     CSPixelButtonNode *motion = [[CSPixelButtonNode alloc] initWithText:@"MOTION"
                                                              textureName:@"ui_button_sky"
-                                                                    size:CGSizeMake(90, 18)
-                                                               fontScale:0.68];
+                                                                    size:CGSizeMake(90, 24)
+                                                               fontScale:0.56];
     motion.position = CGPointMake(468, 82);
     motion.actionBlock = ^{
         BOOL value = !CSAppContext.shared.save.reducedMotion;
@@ -214,8 +214,8 @@
 
     CSPixelButtonNode *mute = [[CSPixelButtonNode alloc] initWithText:@"MUTE"
                                                            textureName:@"ui_button_sky"
-                                                                  size:CGSizeMake(74, 18)
-                                                             fontScale:0.68];
+                                                                  size:CGSizeMake(74, 24)
+                                                             fontScale:0.56];
     mute.position = CGPointMake(561, 82);
     mute.actionBlock = ^{
         [CSAppContext.shared.audio toggleMuted];
@@ -227,8 +227,8 @@
 
     _resetButton = [[CSPixelButtonNode alloc] initWithText:@"RESET PROGRESS"
                                                 textureName:@"ui_button_disabled"
-                                                       size:CGSizeMake(180, 18)
-                                                  fontScale:0.62];
+                                                       size:CGSizeMake(180, 24)
+                                                  fontScale:0.56];
     _resetButton.position = CGPointMake(466, 56);
     _resetButton.actionBlock = ^{ [weakSelf resetProgress]; };
     [self addButton:_resetButton];
@@ -251,7 +251,7 @@
         case CSDifficultyPresetInsane: presetIndex = 3; break;
         case CSDifficultyPresetCustom: presetIndex = 4; break;
     }
-    _presetMarker.position = CGPointMake(351 + presetIndex * 55, 217);
+    _presetMarker.position = CGPointMake(346 + presetIndex * 58, 217);
 
     if (_settings.preset == CSDifficultyPresetCustom) {
         _difficultySummary.text = @"CUSTOM - TUNE EACH KNOB BELOW";

@@ -8,12 +8,14 @@ typedef NS_ENUM(NSInteger, CSPixelTextAlignment) {
     CSPixelTextAlignmentRight,
 };
 
-/// A label made from the generated glyph atlas. Renders crisp pixel glyphs at
-/// any integer scale, with optional offset drop shadow.
+/// A crisp, smoothly rendered label with an optional offset drop shadow.
+/// Font sizes are snapped to whole points so text stays sharp at the game's
+/// 2x backing scale. Set maxWidth to shrink long strings to fit a container.
 @interface CSPixelLabelNode : SKNode
 
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic) CGFloat fontScale;
+@property (nonatomic) CGFloat maxWidth;
 @property (nonatomic, strong) NSColor *textColor;
 @property (nonatomic) CSPixelTextAlignment alignment;
 @property (nonatomic) BOOL shadowEnabled;

@@ -292,11 +292,24 @@ static NSMutableDictionary *CSMutableDefaultState(void) {
 }
 
 - (NSInteger)nextLevelToPlay {
-    NSInteger level = [self highestUnlockedLevel];
-    while (level < 100 && [self isLevelCompleted:level]) {
-        level++;
+    // Start at the first level that has not been completed. This keeps the
+    // Play button on level 1 even when a save has every level unlocked, and
+    // still advances normally as levels are passed.
+    for (NSInteger level = 1; level < 100; level++) {
+        if (![self isLevelCompleted:level]) return level;
     }
-    return level;
+    return 100;
+}
+
+- (BOOL)hasPlayedAnyRun {
+    NSDictionary *levels = _state[@"progress"][@"levels"];
+    if (![levels isKindOfClass:[NSDictionary class]]) return NO;
+    for (NSDictionary *entry in levels.allValues) {
+        if ([entry isKindOfClass:[NSDictionary class]] && [entry[@"plays"] integerValue] > 0) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (BOOL)isLevelCompleted:(NSInteger)levelID {

@@ -124,6 +124,54 @@
     XCTAssertTrue([_save isCarUnlocked:free]);
 }
 
+- (void)testCompletedLevelPersistsAcrossReload {
+    CSRunResult *first = [self resultForLevel:1 score:4200 stars:2 completed:YES];
+    [_save recordResult:first];
+
+    // Reload from the same directory, as a fresh app launch would. Progress
+    // must already be on disk when the results screen is presented.
+    CSSaveManager *reloaded = [[CSSaveManager alloc] initWithDirectory:_directory];
+    XCTAssertTrue([reloaded isLevelCompleted:1]);
+    XCTAssertEqual([reloaded starsForLevel:1], 2);
+    XCTAssertEqual([reloaded bestScoreForLevel:1], 4200);
+    XCTAssertEqual([reloaded playCountForLevel:1], 1);
+    XCTAssertEqual(reloaded.highestUnlockedLevel, 2);
+    XCTAssertEqual(reloaded.nextLevelToPlay, 2);
+    XCTAssertEqual([reloaded topScoresForLevel:1].count, 1);
+    XCTAssertEqual([reloaded topRuns].count, 1);
+}
+
+- (void)testAllLevelsUnlockedStillStartsAtLevelOne {
+    NSMutableDictionary *state = [[_save rawState] mutableCopy];
+    NSMutableDictionary *progress = [state[@"progress"] mutableCopy];
+    progress[@"highestUnlocked"] = @100;
+    state[@"progress"] = progress;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:state options:0 error:NULL];
+    XCTAssertNotNil(data);
+    XCTAssertTrue([data writeToURL:_save.saveURL options:NSDataWritingAtomic error:NULL]);
+
+    CSSaveManager *reloaded = [[CSSaveManager alloc] initWithDirectory:_directory];
+    XCTAssertEqual(reloaded.highestUnlockedLevel, 100);
+    XCTAssertEqual(reloaded.nextLevelToPlay, 1);
+    XCTAssertFalse(reloaded.hasPlayedAnyRun);
+
+    [reloaded recordResult:[self resultForLevel:1 score:3000 stars:3 completed:YES]];
+    XCTAssertTrue(reloaded.hasPlayedAnyRun);
+    XCTAssertEqual(reloaded.highestUnlockedLevel, 100);
+    XCTAssertEqual(reloaded.nextLevelToPlay, 2);
+}
+
+- (void)testFailedRunDoesNotUnlockNextLevelOnDisk {
+    [_save recordResult:[self resultForLevel:1 score:900 stars:0 completed:NO]];
+
+    CSSaveManager *reloaded = [[CSSaveManager alloc] initWithDirectory:_directory];
+    XCTAssertFalse([reloaded isLevelCompleted:1]);
+    XCTAssertEqual(reloaded.highestUnlockedLevel, 1);
+    XCTAssertEqual(reloaded.nextLevelToPlay, 1);
+    XCTAssertEqual([reloaded playCountForLevel:1], 1);
+    XCTAssertEqual([reloaded topRuns].count, 1);
+}
+
 - (void)testTopScoresAreCappedAtTen {
     for (NSInteger i = 1; i <= 12; i++) {
         CSRunResult *result = [self resultForLevel:4 score:i * 100 stars:1 completed:YES];

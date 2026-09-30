@@ -67,6 +67,9 @@
         [self presentGarage];
     } else if ([name isEqualToString:@"scores"]) {
         [self presentScores];
+        if (context.scoresGlobalMode) {
+            [(CSScoresScene *)self.currentScene showGlobalMode];
+        }
     } else if ([name isEqualToString:@"settings"]) {
         [self presentSettings];
     } else if ([name isEqualToString:@"briefing"]) {
@@ -94,7 +97,10 @@
         CSLevel *level = [context.catalog levelForID:levelID];
         result.levelName = level.name;
         result.worldID = level.worldID;
-        result.score = completed ? level.star3 + 420 : 1840;
+        // Debug results are not recorded, so make a completed demo run beat
+        // the saved best. This keeps "NEW BEST!" and BEST SCORE coherent.
+        NSInteger best = [context.save bestScoreForLevel:levelID];
+        result.score = completed ? MAX(level.star3 + 420, best + 280) : 1840;
         result.completed = completed;
         result.stars = completed ? 3 : 0;
         result.coins = completed ? 48 : 19;

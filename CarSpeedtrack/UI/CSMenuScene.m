@@ -35,7 +35,13 @@
 
     [self addPanelWithTexture:@"ui_panel_dark" size:CGSizeMake(310, 248) position:CGPointMake(170, 128) zPosition:2];
 
-    [self addLabel:@"WELCOME BACK!" atPoint:CGPointMake(86, 232) scale:0.82
+    // A brand-new save has no completed runs and no stars. Greet those players
+    // as newcomers instead of saying "welcome back" before their first race.
+    // Do not use highestUnlocked here: a save can have every level unlocked
+    // while still having no played runs.
+    BOOL firstRun = !context.save.hasPlayedAnyRun && context.save.totalStars == 0;
+    [self addLabel:firstRun ? @"WELCOME!" : @"WELCOME BACK!"
+           atPoint:CGPointMake(86, 232) scale:0.82
              color:[NSColor colorWithSRGBRed:1.0 green:0.91 blue:0.64 alpha:1.0]
          alignment:CSPixelTextAlignmentLeft zPosition:6];
 
@@ -135,8 +141,8 @@
     starsLabel.shadowEnabled = NO;
 
     CSPixelLabelNode *help = [self addLabel:@"WASD / ARROWS - MOUSE - ENTER"
-                                   atPoint:CGPointMake(564, 24) scale:0.56
-                                     color:[NSColor colorWithSRGBRed:0.28 green:0.18 blue:0.34 alpha:0.65]
+                                   atPoint:CGPointMake(564, 24) scale:0.6
+                                     color:[NSColor colorWithSRGBRed:0.28 green:0.18 blue:0.34 alpha:0.9]
                                  alignment:CSPixelTextAlignmentRight zPosition:6];
     help.shadowEnabled = NO;
 
